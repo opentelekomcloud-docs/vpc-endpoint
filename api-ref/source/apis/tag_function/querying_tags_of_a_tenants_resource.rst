@@ -15,19 +15,19 @@ URI
 
 GET /v1/{project_id}/{resource_type}/tags
 
-:ref:`Table 1 <vpcep_06_0503__table943516221477>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0503__table943516221477>` describes parameters in this URI.
 
 .. _vpcep_06_0503__table943516221477:
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** URI parameters
 
-   +---------------+-----------+--------+---------------------------------------------------------------------------------+
-   | Parameter     | Mandatory | Type   | Description                                                                     |
-   +===============+===========+========+=================================================================================+
-   | project_id    | Yes       | String | Specifies the project ID.                                                       |
-   +---------------+-----------+--------+---------------------------------------------------------------------------------+
-   | resource_type | Yes       | String | Specifies the resource type. The value is **endpoint_service** or **endpoint**. |
-   +---------------+-----------+--------+---------------------------------------------------------------------------------+
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter     | Mandatory | Type   | Description                                                                                                                  |
+   +===============+===========+========+==============================================================================================================================+
+   | project_id    | Yes       | String | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | resource_type | Yes       | String | Specifies the resource type, which can be **endpoint_service** or **endpoint**.                                              |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -36,18 +36,26 @@ Request
 
    None
 
--  Example request
+-  .. _vpcep_06_0503__li1874735215517:
 
-   GET https://127.0.0.1:7443/v1/{project_id}/endpoint_service/tags
+   Example request
 
-   or https://127.0.0.1:7443/v1/{project_id}/endpoint/tags GET /v1/{project_id}/{resource_type}/tags
+   .. code-block:: text
+
+      GET https://{endpoint}/v1/{project_id}/endpoint_service/tags
+
+   or
+
+   .. code-block:: text
+
+      GET https://{endpoint}/v1/{project_id}/endpoint/tags
 
 Response
 --------
 
 -  Parameter description
 
-   .. table:: **Table 2** Response parameters
+   .. table:: **Table 2** Response parameter
 
       ========= ========= ================== ===============
       Parameter Mandatory Type               Description
@@ -57,12 +65,12 @@ Response
 
    .. table:: **Table 3** Data structure of field **resource_tag**
 
-      ========= ========= ============ ======================
+      ========= ========= ============ =============================
       Parameter Mandatory Type         Description
-      ========= ========= ============ ======================
+      ========= ========= ============ =============================
       key       Yes       String       Specifies the tag key.
-      values    Yes       List<String> Lists the tag values.
-      ========= ========= ============ ======================
+      values    Yes       List<String> Specifies the tag value list.
+      ========= ========= ============ =============================
 
 -  Example response
 
@@ -80,7 +88,7 @@ Response
           ]
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

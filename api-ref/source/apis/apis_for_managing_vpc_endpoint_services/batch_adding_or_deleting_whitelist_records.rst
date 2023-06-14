@@ -2,13 +2,13 @@
 
 .. _vpcep_06_0209:
 
-Batch Adding or Deleting Whitelist Records of a VPC Endpoint Service
-====================================================================
+Batch Adding or Deleting Whitelist Records
+==========================================
 
 Function
 --------
 
-This API is used to batch add to or delete whitelist records from a VPC endpoint service.
+This API is used to batch add or delete whitelist records of a VPC endpoint service.
 
 .. note::
 
@@ -19,19 +19,19 @@ URI
 
 POST /v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions/action
 
-:ref:`Table 1 <vpcep_06_0209__table16108480>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0209__table16108480>` describes parameters in this URI.
 
 .. _vpcep_06_0209__table16108480:
 
-.. table:: **Table 1** Parameters
+.. table:: **Table 1** URI parameters
 
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter               | Mandatory | Description                                                                                                                    |
-   +=========================+===========+================================================================================================================================+
-   | project_id              | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | vpc_endpoint_service_id | Yes       | Specifies the ID of the VPC endpoint service.                                                                                  |
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter               | Mandatory | Description                                                                                                                  |
+   +=========================+===========+==============================================================================================================================+
+   | project_id              | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | vpc_endpoint_service_id | Yes       | Specifies the ID of the VPC endpoint service.                                                                                |
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -62,7 +62,9 @@ Request
       |                 |                 |                  | The value is **add** or **remove**.                                                                                                                                                   |
       +-----------------+-----------------+------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+-  .. _vpcep_06_0209__li0655814135210:
+
+   Example request
 
    This request is to add a whitelist record to the VPC endpoint service whose ID is **4189d3c2-8882-4871-a3c2-d380272eed88**.
 
@@ -84,7 +86,7 @@ Request
 
    .. code-block:: text
 
-      POST https://{endpoint}/v1/{project_id}/vpc-endpoint-services/4189d3c2-8882-4871-a3c2-d380272eed88/iam:domain::5fc973eea581490997e82ea11a1d0101/action
+      POST https://{endpoint}/v1/{project_id}/vpc-endpoint-services/4189d3c2-8882-4871-a3c2-d380272eed88/permissions/action
 
    .. code-block::
 
@@ -101,7 +103,7 @@ Response
 
 -  Parameter description
 
-   .. table:: **Table 3** Response parameters
+   .. table:: **Table 3** Response parameter
 
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                                                                                                                                                         |
@@ -123,7 +125,7 @@ Response
             ]
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

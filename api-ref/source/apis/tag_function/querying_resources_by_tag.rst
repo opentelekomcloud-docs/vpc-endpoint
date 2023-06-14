@@ -8,26 +8,26 @@ Querying Resources by Tag
 Function
 --------
 
-This API is used to query resources under the tenant using tags.
+This API is used to query resources of a tenant by tag.
 
 URI
 ---
 
 POST /v1/{project_id}/{resource_type}/resource_instances/action
 
-:ref:`Table 1 <vpcep_06_0501__table51771440203117>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0501__table51771440203117>` describes parameters in this URI.
 
 .. _vpcep_06_0501__table51771440203117:
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** URI parameters
 
-   +---------------+-----------+--------+--------------------------------------------------------------------------------+
-   | Parameter     | Mandatory | Type   | Description                                                                    |
-   +===============+===========+========+================================================================================+
-   | project_id    | Yes       | String | Specifies the project ID.                                                      |
-   +---------------+-----------+--------+--------------------------------------------------------------------------------+
-   | resource_type | Yes       | String | Specifies the resource type. The type is **endpoint_service** or **endpoint**. |
-   +---------------+-----------+--------+--------------------------------------------------------------------------------+
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter     | Mandatory | Type   | Description                                                                                                                  |
+   +===============+===========+========+==============================================================================================================================+
+   | project_id    | Yes       | String | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | resource_type | Yes       | String | Specifies the resource type, which can be **endpoint_service** or **endpoint**.                                              |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -57,7 +57,7 @@ Request
       +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | matches         | No              | List<match>     | Specifies the search field. The tag key is the field to be matched, for example, **resource_name**. **value** indicates the matched value. The key is a fixed dictionary value and cannot contain duplicate keys or unsupported keys.                                                                                                                                                                                                                                                                                                                                        |
       |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-      |                 |                 |                 | Check whether fuzzy match is required based on the **key** value. For example, if **key** is set to **resource_name**, fuzzy search (case-insensitive) is performed by default. If **value** is empty, exact match is performed. Most services do not have resources without names. In this case, an empty list is returned. If **key** is **resource_id**, exact match is used. Currently, only **resource_name** for **key** is supported. Other **key** values will be available later.                                                                                   |
+      |                 |                 |                 | Check whether fuzzy match is required based on the **key** value. For example, if **key** is set to **resource_name**, fuzzy search (case-insensitive) is performed by default. If **value** is empty, exact match is performed. Most services do not have resources without names. In this case, an empty list is returned. If **key** is **resource_id**, exact match is used. Only **resource_name** for **key** is supported. Other **key** values will be available later.                                                                                              |
       +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. table:: **Table 3** Description of field **tag**
@@ -67,7 +67,7 @@ Request
       +=================+=================+=================+===================================================================================================================================================================================================================================================================================================================================================+
       | key             | Yes             | String          | Specifies the tag key. Each tag key contains a maximum of 127 unicode characters but cannot be left blank. The system does not verify the character set of **key** when searching for resources. **key** cannot be empty, an empty string, or spaces. Before using **key**, delete single-byte character (SBC) spaces before and after the value. |
       +-----------------+-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | values          | Yes             | List<String>    | Lists tag values. Each value contains a maximum of 255 Unicode characters. Before using **values**, delete SBC spaces before and after the value.                                                                                                                                                                                                 |
+      | values          | Yes             | List<String>    | Specifies the tag value list. Each value contains a maximum of 255 Unicode characters. Before using **values**, delete SBC spaces before and after the value.                                                                                                                                                                                     |
       |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                   |
       |                 |                 |                 | The value can be an empty array but cannot be left blank.                                                                                                                                                                                                                                                                                         |
       |                 |                 |                 |                                                                                                                                                                                                                                                                                                                                                   |
@@ -81,18 +81,20 @@ Request
       +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------+
       | Parameter | Mandatory | Type   | Description                                                                                                                       |
       +===========+===========+========+===================================================================================================================================+
-      | key       | Yes       | String | Specifies the tag key. Currently, only **resource_name** for **key** is supported. Other **key** values will be available later.  |
+      | key       | Yes       | String | Specifies the tag key. Only **resource_name** for **key** is supported. Other **key** values will be available later.             |
       +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------+
       | value     | Yes       | String | Specifies the tag value. Each value contains a maximum of 255 Unicode characters. The character set of **value** is not verified. |
       +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+-  .. _vpcep_06_0501__li676964019312:
 
-   POST https://127.0.0.1:7443/v1/{project_id}/endpoint_service/resource_instances/action
+   Example request
 
-   or POST https://127.0.0.1:7443/v1/{project_id}/endpoint/resource_instances/action
+   POST https://{endpoint}/v1/{project_id}/endpoint_service/resource_instances/action
 
-   or POST https://127.0.0.1:7443/v1/{project_id}/{resource_type}/resource_instances/action
+   or POST https://{endpoint}/v1/{project_id}/endpoint/resource_instances/action
+
+   or POST https://{endpoint}/v1/{project_id}/{resource_type}/resource_instances/action
 
    -  Request body when **action** is set to **filter**
 
@@ -271,7 +273,7 @@ Response
              "total_count": 1000
          }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

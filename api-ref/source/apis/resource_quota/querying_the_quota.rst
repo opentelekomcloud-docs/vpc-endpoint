@@ -15,33 +15,39 @@ URI
 
 GET /v1/{project_id}/quotas?type={resource_type}
 
-:ref:`Table 1 <vpcep_06_0401__table1148411527716>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0401__table1148411527716>` describes the parameter in this URI.
 
 .. _vpcep_06_0401__table1148411527716:
 
-.. table:: **Table 1** Parameters
+.. table:: **Table 1** URI parameter
 
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Description                                                                                                                    |
-   +============+===========+================================================================================================================================+
-   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Description                                                                                                                  |
+   +============+===========+==============================================================================================================================+
+   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+
+.. _vpcep_06_0401__table5505175211710:
+
+.. table:: **Table 2** Query parameter
+
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                  |
+   +=================+=================+=================+==============================================================+
+   | type            | No              | String          | Specifies the resource type.                                 |
+   |                 |                 |                 |                                                              |
+   |                 |                 |                 | -  **endpoint_service**: indicates the VPC endpoint service. |
+   |                 |                 |                 | -  **endpoint**: indicates the VPC endpoint.                 |
+   +-----------------+-----------------+-----------------+--------------------------------------------------------------+
 
 Request
 -------
 
--  Parameter description
+-  .. _vpcep_06_0401__li196555523711:
 
-   .. table:: **Table 2** Request parameters
+   Parameter description
 
-      +-----------------+-----------------+-----------------+--------------------------------------------------------------+
-      | Parameter       | Mandatory       | Type            | Description                                                  |
-      +=================+=================+=================+==============================================================+
-      | type            | No              | String          | Specifies the resource type.                                 |
-      |                 |                 |                 |                                                              |
-      |                 |                 |                 | -  **endpoint_service**: indicates the VPC endpoint service. |
-      |                 |                 |                 | -  **endpoint**: indicates the VPC endpoint.                 |
-      +-----------------+-----------------+-----------------+--------------------------------------------------------------+
+   None
 
 -  Example request
 
@@ -56,7 +62,7 @@ Response
 
 -  Parameter description
 
-   .. table:: **Table 3** Response parameters
+   .. table:: **Table 3** Response parameter
 
       +-----------+--------+----------------------------------------------------------------------------------------------+
       | Parameter | Type   | Description                                                                                  |
@@ -66,7 +72,7 @@ Response
 
    .. _vpcep_06_0401__table862171544417:
 
-   .. table:: **Table 4** Quotas description
+   .. table:: **Table 4** Quotas parameter
 
       +-----------+------------------+-------------------------------------------------------------------------------------------+
       | Parameter | Type             | Description                                                                               |
@@ -116,7 +122,7 @@ Response
               }
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

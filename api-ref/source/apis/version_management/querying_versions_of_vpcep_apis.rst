@@ -5,10 +5,16 @@
 Querying Versions of VPCEP APIs
 ===============================
 
+.. _vpcep_06_0101__section911804819271:
+
 Function
 --------
 
 This API is used to query versions of VPCEP APIs.
+
+.. note::
+
+   v2 cannot be used.
 
 URI
 ---
@@ -75,30 +81,46 @@ Response
       | rel       | String | Specifies the relationship between the current API version and the referenced address.        |
       +-----------+--------+-----------------------------------------------------------------------------------------------+
 
--  Example response
+-  .. _vpcep_06_0101__li91288579361:
+
+   Example response
 
    .. code-block::
 
       {
-        "versions":[
-          {
-            "updated":"2018-09-30T00:00:00Z",
-            "version":"1",
-            "min_version":"",
-            "status":"CURRENT",
-            "id":"v1",
-            "links":[
+          "versions": [
               {
-                "href":"https://{vpcep_uri}/v1",
-                "type":"application/json",
-                "rel":"self"
+                  "status": "CURRENT",
+                  "id": "v1",
+                  "updated": "2018-09-30T00:00:00Z",
+                  "version": "1",
+                  "links": [
+                      {
+                          "rel": "self",
+                          "href": "https://{vpcep_uri}/v1",
+                          "type": "application/json"
+                      }
+                  ],
+                  "min_version": ""
+              },
+              {
+                  "status": "CURRENT",
+                  "id": "v2",
+                  "updated": "2020-03-30T00:00:00Z",
+                  "version": "2",
+                  "links": [
+                      {
+                          "rel": "self",
+                          "href": "https://{vpcep_uri}/v2",
+                          "type": "application/json"
+                      }
+                  ],
+                  "min_version": ""
               }
-            ]
-          }
-        ]
+          ]
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

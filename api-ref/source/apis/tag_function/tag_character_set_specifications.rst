@@ -8,9 +8,9 @@ Tag Character Set Specifications
 Character Set Specifications for Keys
 -------------------------------------
 
-The key should be Unicode characters, including only digits, letters, hyphens (-), and underscores (_). It cannot be empty.
+The key should be Unicode characters and cannot be left blank. Only digits, letters, hyphens (-), underscores, and at signs (@) are allowed.
 
 Character Set Specifications for Values
 ---------------------------------------
 
-The value should be Unicode characters, including only digits, letters, hyphens (-), and underscores (_).
+The value should be Unicode characters, including only digits, letters, hyphens (-), underscores, and at signs (@).

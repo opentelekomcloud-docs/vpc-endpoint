@@ -2,59 +2,65 @@
 
 .. _vpcep_06_0302:
 
-Querying Basic Information of a VPC Endpoint Service
-====================================================
+Querying Basic Information About a VPC Endpoint Service
+=======================================================
 
 Function
 --------
 
-This API is used to query basic information of a target VPC endpoint service. You can use this API to query the target VPC endpoint service to be accessed. This API can also be used by other users to query basic information of your VPC endpoint service, without exposing your server information.
+This API is used to query basic information about a target VPC endpoint service. You can use this API to query the target VPC endpoint service to be accessed. This API can also be used by other users to query basic information about your VPC endpoint service, without exposing your server information.
 
 URI
 ---
 
 GET /v1/{project_id}/vpc-endpoint-services/describe?endpoint_service_name={endpoint_service_name}&id={endpoint_service_id}
 
-:ref:`Table 1 <vpcep_06_0302__table19259243>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0302__table19259243>` describes the parameter in this URI.
 
 .. _vpcep_06_0302__table19259243:
 
-.. table:: **Table 1** Parameters
+.. table:: **Table 1** URI parameter
 
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Description                                                                                                                    |
-   +============+===========+================================================================================================================================+
-   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Description                                                                                                                  |
+   +============+===========+==============================================================================================================================+
+   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+
+.. _vpcep_06_0302__table16494874:
+
+.. table:: **Table 2** Query parameters
+
+   +-----------------------+---------------------------------------------------------------------------------------+-----------------+------------------------------------------------------+
+   | Parameter             | Mandatory                                                                             | Type            | Description                                          |
+   +=======================+=======================================================================================+=================+======================================================+
+   | endpoint_service_name | No                                                                                    | String          | Specifies the name of the VPC endpoint service.      |
+   |                       |                                                                                       |                 |                                                      |
+   |                       | .. note::                                                                             |                 |                                                      |
+   |                       |                                                                                       |                 |                                                      |
+   |                       |    Either this parameter or the **id** parameter must be selected.                    |                 |                                                      |
+   +-----------------------+---------------------------------------------------------------------------------------+-----------------+------------------------------------------------------+
+   | id                    | No                                                                                    | String          | Specifies the unique ID of the VPC endpoint service. |
+   |                       |                                                                                       |                 |                                                      |
+   |                       | .. note::                                                                             |                 |                                                      |
+   |                       |                                                                                       |                 |                                                      |
+   |                       |    Either this parameter or the **endpoint_service_name** parameter must be selected. |                 |                                                      |
+   +-----------------------+---------------------------------------------------------------------------------------+-----------------+------------------------------------------------------+
 
 Request
 -------
 
 -  Parameter description
 
-   .. table:: **Table 2** Request parameters
+   None
 
-      +-----------------------+---------------------------------------------------------------------------------------+-----------------+------------------------------------------------------+
-      | Parameter             | Mandatory                                                                             | Type            | Description                                          |
-      +=======================+=======================================================================================+=================+======================================================+
-      | endpoint_service_name | No                                                                                    | String          | Specifies the name of the VPC endpoint service.      |
-      |                       |                                                                                       |                 |                                                      |
-      |                       | .. note::                                                                             |                 |                                                      |
-      |                       |                                                                                       |                 |                                                      |
-      |                       |    Either this parameter or the **id** parameter must be selected.                    |                 |                                                      |
-      +-----------------------+---------------------------------------------------------------------------------------+-----------------+------------------------------------------------------+
-      | id                    | No                                                                                    | String          | Specifies the unique ID of the VPC endpoint service. |
-      |                       |                                                                                       |                 |                                                      |
-      |                       | .. note::                                                                             |                 |                                                      |
-      |                       |                                                                                       |                 |                                                      |
-      |                       |    Either this parameter or the **endpoint_service_name** parameter must be selected. |                 |                                                      |
-      +-----------------------+---------------------------------------------------------------------------------------+-----------------+------------------------------------------------------+
+-  .. _vpcep_06_0302__li189061227201719:
 
--  Example request
+   Example request
 
    .. code-block:: text
 
-      GET https://{endpoint}/v1/{project_id}/vpc-endpoint-services/describe?id={4189d3c2-8882-4871-a3c2-d380272eed83}
+      GET https://{endpoint}/v1/{project_id}/vpc-endpoint-services/describe?id=4189d3c2-8882-4871-a3c2-d380272eed83
 
 Response
 --------
@@ -99,7 +105,7 @@ Response
         "is_charge": "true"
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

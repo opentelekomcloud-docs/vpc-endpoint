@@ -10,61 +10,69 @@ Function
 
 This API is used to query VPC endpoints.
 
+.. _vpcep_06_0306__section62607570:
+
 URI
 ---
 
 GET /v1/{project_id}/vpc-endpoints?endpoint_service_name={endpoint_service_name}&vpc_id={vpc_id}&limit={limit}&offset={offset}&id={id}&sort_key={sort_key}&sort_dir={sort_dir}
 
-:ref:`Table 1 <vpcep_06_0306__table35342882>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0306__table35342882>` describes the parameter in this URI.
 
 .. _vpcep_06_0306__table35342882:
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** URI parameter
 
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Description                                                                                                                    |
-   +============+===========+================================================================================================================================+
-   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Description                                                                                                                  |
+   +============+===========+==============================================================================================================================+
+   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+
+.. _vpcep_06_0306__table44201211:
+
+.. table:: **Table 2** Query parameters
+
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type            | Description                                                                                                                                                  |
+   +=======================+=================+=================+==============================================================================================================================================================+
+   | endpoint_service_name | No              | String          | Specifies the name of the VPC endpoint service. The name is not case-sensitive and supports fuzzy match.                                                     |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | vpc_id                | No              | String          | Specifies the ID of the VPC where the VPC endpoint is to be created.                                                                                         |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | id                    | No              | String          | Specifies the unique ID of the VPC endpoint.                                                                                                                 |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | limit                 | No              | Integer         | Specifies the maximum number of VPC endpoints displayed on each page.                                                                                        |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | The number ranges from **0** to **1000** and is generally **10**, **20**, or **50**. The default number is **10**.                                           |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | offset                | No              | Integer         | Specifies the offset.                                                                                                                                        |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | All VPC endpoint services after this offset will be queried. The offset must be an integer greater than 0 but less than the number of VPC endpoint services. |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | sort_key              | No              | String          | Specifies the sorting field of the VPC endpoint list. The field can be:                                                                                      |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | -  **created_at**: VPC endpoints are sorted by creation time.                                                                                                |
+   |                       |                 |                 | -  **updated_at**: VPC endpoints are sorted by update time.                                                                                                  |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | The default field is **created_at**.                                                                                                                         |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | sort_dir              | No              | String          | Specifies the sorting method of the VPC endpoint list. The method can be:                                                                                    |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | -  **desc**: VPC endpoints are sorted in descending order.                                                                                                   |
+   |                       |                 |                 | -  **asc**: VPC endpoints are sorted in ascending order.                                                                                                     |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | The default method is **desc**.                                                                                                                              |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
 
--  Parameter description
+-  .. _vpcep_06_0306__li9332559143212:
 
-   .. table:: **Table 2** Request parameters
+   Parameter description
 
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter             | Mandatory       | Type            | Description                                                                                                                                                  |
-      +=======================+=================+=================+==============================================================================================================================================================+
-      | endpoint_service_name | No              | String          | Specifies the name of the VPC endpoint service. The name is not case-sensitive and supports fuzzy match.                                                     |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | vpc_id                | No              | String          | Specifies the ID of the VPC where the VPC endpoint is to be created.                                                                                         |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | id                    | No              | String          | Specifies the unique ID of the VPC endpoint.                                                                                                                 |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | limit                 | No              | Integer         | Specifies the maximum number of VPC endpoints displayed on each page.                                                                                        |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | The number ranges from **0** to **1000** and is generally **10**, **20**, or **50**. The default number is **10**.                                           |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | offset                | No              | Integer         | Specifies the offset.                                                                                                                                        |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | All VPC endpoint services after this offset will be queried. The offset must be an integer greater than 0 but less than the number of VPC endpoint services. |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | sort_key              | No              | String          | Specifies the sorting field of the VPC endpoint list. The field can be:                                                                                      |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | -  **create_at**: indicates that VPC endpoints are sorted by creation time.                                                                                  |
-      |                       |                 |                 | -  **update_at**: indicates that VPC endpoints are sorted by update time.                                                                                    |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | The default field is **create_at**.                                                                                                                          |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | sort_dir              | No              | String          | Specifies the sorting method of the VPC endpoint list. The method can be:                                                                                    |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | -  **desc**: indicates that VPC endpoints are sorted in the descending order.                                                                                |
-      |                       |                 |                 | -  **asc**: indicates that VPC endpoints are sorted in the ascending order.                                                                                  |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | The default method is **desc**.                                                                                                                              |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   None
 
 -  Example request
 
@@ -72,10 +80,14 @@ Request
 
       GET https://{endpoint}/v1/{project_id}/vpc-endpoints
 
+.. _vpcep_06_0306__section6891296:
+
 Response
 --------
 
 -  Parameter description
+
+   .. _vpcep_06_0306__table62266580:
 
    .. table:: **Table 3** Response parameters
 
@@ -89,7 +101,7 @@ Response
 
    .. _vpcep_06_0306__table66917326:
 
-   .. table:: **Table 4** VPC endpoint parameters
+   .. table:: **Table 4** endpoint parameters
 
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                                                                                                                                      |
@@ -105,17 +117,21 @@ Response
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | status                | String                | Specifies the connection status of the VPC endpoint.                                                                                                                                                             |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | -  **pendingAcceptance**: indicates that the VPC endpoint is pending acceptance.                                                                                                                                 |
-      |                       |                       | -  **creating**: indicates the VPC endpoint is being created.                                                                                                                                                    |
-      |                       |                       | -  **accepted**: indicates the VPC endpoint has been accepted.                                                                                                                                                   |
-      |                       |                       | -  **rejected**: indicates the VPC endpoint has been rejected.                                                                                                                                                   |
-      |                       |                       | -  **failed**: indicates the creation of the VPC endpoint failed.                                                                                                                                                |
-      |                       |                       | -  **deleting**: indicates the VPC endpoint is being deleted.                                                                                                                                                    |
+      |                       |                       | -  **pendingAcceptance**: The VPC endpoint is to be accepted.                                                                                                                                                    |
+      |                       |                       | -  **creating**: The VPC endpoint is being created.                                                                                                                                                              |
+      |                       |                       | -  **accepted**: The VPC endpoint has been accepted.                                                                                                                                                             |
+      |                       |                       | -  **rejected**: The VPC endpoint has been rejected.                                                                                                                                                             |
+      |                       |                       | -  **failed**: The VPC endpoint failed to be created.                                                                                                                                                            |
+      |                       |                       | -  **deleting**: The VPC endpoint is being deleted.                                                                                                                                                              |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | active_status         | String                | Specifies the domain status.                                                                                                                                                                                     |
+      | active_status         | Array of strings      | Specifies the domain status.                                                                                                                                                                                     |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | -  **frozen**: indicates that the domain is frozen.                                                                                                                                                              |
-      |                       |                       | -  **active**: indicates that the domain is normal.                                                                                                                                                              |
+      |                       |                       | -  **arrear_frozen**: frozen due to arrears                                                                                                                                                                      |
+      |                       |                       | -  **verify_frozen**: frozen due to lack of real-name authentication                                                                                                                                             |
+      |                       |                       | -  **police_frozen**: frozen for legal management                                                                                                                                                                |
+      |                       |                       | -  **illegal_frozen**: frozen due to abuse                                                                                                                                                                       |
+      |                       |                       | -  **partner_frozen**: frozen for partnership                                                                                                                                                                    |
+      |                       |                       | -  **active**: The domain is normal.                                                                                                                                                                             |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | endpoint_service_name | String                | Specifies the name of the VPC endpoint service.                                                                                                                                                                  |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -125,8 +141,8 @@ Response
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | enable_dns            | Boolean               | Specifies whether to create a private domain name.                                                                                                                                                               |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | -  **true**: indicates that a private domain name is created.                                                                                                                                                    |
-      |                       |                       | -  **false**: indicates that a private domain name is not created.                                                                                                                                               |
+      |                       |                       | -  **true**: A private domain name is created.                                                                                                                                                                   |
+      |                       |                       | -  **false**: A private domain name is not created.                                                                                                                                                              |
       |                       |                       |                                                                                                                                                                                                                  |
       |                       |                       | .. note::                                                                                                                                                                                                        |
       |                       |                       |                                                                                                                                                                                                                  |
@@ -134,7 +150,9 @@ Response
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | dns_names             | Array of strings      | Specifies the domain name for accessing the associated VPC endpoint service.                                                                                                                                     |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | This parameter is only available when **enable_dns** is set to **true**.                                                                                                                                         |
+      |                       |                       | .. note::                                                                                                                                                                                                        |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       |    This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service and **enable_dns** is set to **true**.                                                    |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | ip                    | String                | Specifies the IP address for accessing the associated VPC endpoint service.                                                                                                                                      |
       |                       |                       |                                                                                                                                                                                                                  |
@@ -148,7 +166,11 @@ Response
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | vpc_id                | String                | Specifies the ID of the VPC where the VPC endpoint is to be created.                                                                                                                                             |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | subnet_id             | String                | Specifies the ID of the subnet in the VPC specified by **vpc_id**. The ID is in the UUID format.                                                                                                                 |
+      | subnet_id             | String                | Specifies the ID of the subnet in the VPC specified by **vpc_id**. The ID is in UUID format.                                                                                                                     |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       | .. note::                                                                                                                                                                                                        |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       |    This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                                                                          |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | created_at            | String                | Specifies the creation time of the VPC endpoint.                                                                                                                                                                 |
       |                       |                       |                                                                                                                                                                                                                  |
@@ -158,7 +180,7 @@ Response
       |                       |                       |                                                                                                                                                                                                                  |
       |                       |                       | The UTC time format is used: YYYY-MM-DDTHH:MM:SSZ.                                                                                                                                                               |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | project_id            | String                | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`.                                                                                   |
+      | project_id            | String                | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`.                                                                                     |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | tags                  | Array of objects      | Lists the resource tags. For details, see :ref:`Table 5 <vpcep_06_0306__table489217571060>`.                                                                                                                     |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -170,35 +192,52 @@ Response
       |                       |                       |                                                                                                                                                                                                                  |
       |                       |                       | If you do not specify this parameter, an empty whitelist is returned.                                                                                                                                            |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | This parameter is available only if you create a VPC endpoint for connecting to an interface VPC endpoint service.                                                                                               |
-      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | enable_whitelist      | Boolean               | Specifies whether to enable access control.                                                                                                                                                                      |
+      |                       |                       | .. note::                                                                                                                                                                                                        |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | -  **true**: indicates that access control is enabled.                                                                                                                                                           |
-      |                       |                       | -  **false**: indicates that access control is disabled.                                                                                                                                                         |
+      |                       |                       |    This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                                                                          |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | enable_whitelist      | Boolean               | Specifies whether access control is enabled.                                                                                                                                                                     |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       | -  **true**: Access control is enabled.                                                                                                                                                                          |
+      |                       |                       | -  **false**: Access control is disabled.                                                                                                                                                                        |
       |                       |                       |                                                                                                                                                                                                                  |
       |                       |                       | If you do not specify this parameter, the whitelist is not enabled.                                                                                                                                              |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | This parameter is available only if you create a VPC endpoint for connecting to an interface VPC endpoint service.                                                                                               |
+      |                       |                       | .. note::                                                                                                                                                                                                        |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       |    This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                                                                          |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | routetables           | Array of strings      | Lists the IDs of route tables.                                                                                                                                                                                   |
       |                       |                       |                                                                                                                                                                                                                  |
       |                       |                       | If you do not specify this parameter, the route table ID of the VPC is returned.                                                                                                                                 |
       |                       |                       |                                                                                                                                                                                                                  |
-      |                       |                       | This parameter is available only when you create a VPC endpoint for connecting to a gateway VPC endpoint service.                                                                                                |
+      |                       |                       | .. note::                                                                                                                                                                                                        |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       |    This parameter is available only when you create a VPC endpoint for connecting to a gateway VPC endpoint service.                                                                                             |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | description           | String                | Specifies the description of the VPC endpoint.                                                                                                                                                                   |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | specification_name    | String                | Specifies the name of the VPC endpoint specifications.                                                                                                                                                           |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | endpoint_pool_id      | String                | (To be discarded) Specifies the ID of the cluster associated with the VPC endpoint.                                                                                                                              |
+      +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | enable_status         | String                | Specifies whether to enable the endpoint.                                                                                                                                                                        |
+      |                       |                       |                                                                                                                                                                                                                  |
+      |                       |                       | -  **enable**: The endpoint will be enabled.                                                                                                                                                                     |
+      |                       |                       | -  **disable**: The endpoint will be disabled.                                                                                                                                                                   |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_06_0306__table489217571060:
 
-   .. table:: **Table 5** **ResourceTags** parameters
+   .. table:: **Table 5** Tags parameters
 
-      +-----------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter | Type   | Description                                                                                                                                                                               |
-      +===========+========+===========================================================================================================================================================================================+
-      | key       | String | Specifies the tag key. A tag key contains a maximum of 36 Unicode characters. This parameter cannot be left blank. It can contain only digits, letters, hyphens (-), and underscores (_). |
-      +-----------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value     | String | Specifies the tag value. A tag value contains a maximum of 43 Unicode characters and can be left blank. It can contain only digits, letters, hyphens (-), and underscores (_).            |
-      +-----------+--------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter | Type   | Description                                                                                                                                                                                      |
+      +===========+========+==================================================================================================================================================================================================+
+      | key       | String | Specifies the tag key. A tag key contains a maximum of 36 Unicode characters. **key** cannot be left blank. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
+      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | value     | String | Specifies the tag value. A tag value contains a maximum of 43 Unicode characters and can be left blank. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@).     |
+      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_06_0306__table1736562411812:
 
@@ -211,7 +250,9 @@ Response
       error_message String Specifies the error message.
       ============= ====== ============================
 
--  Example response
+-  .. _vpcep_06_0306__li2312013:
+
+   Example response
 
    .. code-block::
 
@@ -223,12 +264,16 @@ Response
             "status":"accepted",
             "ip":"192.168.0.232",
             "marker_id":16777337,
-            "active_status":"active",
+            "active_status":[
+                             "active"
+             ],
             "vpc_id":"84758cf5-9c62-43ae-a778-3dbd8370c0a4",
             "service_type":"interface",
             "project_id":"295dacf46a4842fcbf7844dc2dc2489d",
             "subnet_id":"68bfbcc1-dff2-47e4-a9d4-332b9bc1b8de",
             "enable_dns":"true",
+            "specification_name":"default",
+            "endpoint_pool_id":"501f4a3b-6f96-4309-97d1-e291b8ca5b96",
             "dns_name":"test123",
             "created_at":"2018-10-18T06:49:46Z",
             "updated_at":"2018-10-18T06:49:50Z",
@@ -236,6 +281,7 @@ Response
             "endpoint_service_name":"test123",
             "whitelist":["127.0.0.1"],
             "enable_whitelist":true,
+            "description" : "",
             "tags":
               [
                 {
@@ -249,12 +295,16 @@ Response
             "status":"accepted",
             "ip":"192.168.0.115",
             "marker_id":16777322,
-            "active_status":"active",
+            "active_status":[
+                             "active"
+             ],
             "vpc_id":"e251b400-2963-4131-b38a-da81e32026ee",
             "service_type":"interface",
             "project_id":"295dacf46a4842fcbf7844dc2dc2489d",
             "subnet_id":"65528a22-59a1-4972-ba64-88984b3207cd",
             "enable_dns":"true",
+            "specification_name":"default",
+            "endpoint_pool_id":"ee38223b-aacb-46f0-ba7e-94fa62e35dde",
             "dns_name":"test123",
             "created_at":"2018-10-18T06:36:20Z",
             "updated_at":"2018-10-18T06:36:24Z",
@@ -262,6 +312,7 @@ Response
             "endpoint_service_name":"test123",
             "whitelist":["127.0.0.1"],
             "enable_whitelist":true,
+            "description" : "",
             "tags":
               [
                 {
@@ -271,10 +322,10 @@ Response
               ]
           }
        ],
-       "total_count":17
+       "total_count":2
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.
