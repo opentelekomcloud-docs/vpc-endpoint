@@ -15,11 +15,11 @@ There are two types of VPC endpoint services: gateway and interface.
 Gateway VPC Endpoint Services
 -----------------------------
 
-Gateway endpoint services are configured from cloud services by the system. You do not have the permission to configure such services but can select them when creating a VPC endpoint.
+Gateway VPC endpoint services are configured from cloud services by the system. You do not have the permissions to configure such VPC endpoint services but can select them when creating a VPC endpoint.
 
 .. note::
 
-   Supported cloud services vary in different regions. For details, see the list of services that can be configured on the management console.
+   Supported cloud services vary in different regions. For details, see the services that can be configured on the management console.
 
 .. table:: **Table 1** Supported gateway VPC endpoint services
 
@@ -42,12 +42,14 @@ Interface VPC Endpoint Services
 
 Interface VPC endpoint services are mainly configured from:
 
--  Cloud services. You do not have the permission to configure such endpoint services, but can select them when creating a VPC endpoint.
+-  Cloud services. You do not have the permissions to configure such VPC endpoint services but can select them when creating a VPC endpoint.
 -  Your private services
 
 .. note::
 
-   Supported cloud services vary in different regions. For details, see the list of services that can be configured on the management console.
+   Supported cloud services vary in different regions. For details, see the services that can be configured on the management console.
+
+.. _vpcep_01_0013__table142624462110:
 
 .. table:: **Table 2** Supported interface VPC endpoint services
 
@@ -70,5 +72,11 @@ Interface VPC endpoint services are mainly configured from:
    |                      |                        |             |                                |                                                                                                                                                          |
    |                      |                        |             |                                | .. note::                                                                                                                                                |
    |                      |                        |             |                                |                                                                                                                                                          |
-   |                      |                        |             |                                |    Only region eu-de supports BMSs.                                                                                                                      |
+   |                      |                        |             |                                |    The BMS type will be discarded. The ELB type is recommended.                                                                                          |
+   +----------------------+------------------------+-------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | VIP                  | Users' private service | Interface   | None                           | Backend resources of this type serve as virtual IP addresses.                                                                                            |
+   |                      |                        |             |                                |                                                                                                                                                          |
+   |                      |                        |             |                                | .. note::                                                                                                                                                |
+   |                      |                        |             |                                |                                                                                                                                                          |
+   |                      |                        |             |                                |    The VIP type will be discarded. The ELB type is recommended.                                                                                          |
    +----------------------+------------------------+-------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+

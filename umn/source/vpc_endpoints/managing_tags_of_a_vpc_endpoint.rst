@@ -10,7 +10,7 @@ Scenarios
 
 After a VPC endpoint is created, you can view its tags, or add, edit, or delete a tag.
 
-Each VPC endpoint has a unique tag, which consists of a tag key and a tag value. You can add a maximum of 20 tags to each VPC endpoint.
+Tags help identify VPC endpoints. You can add up to 20 tags to each VPC endpoint.
 
 .. note::
 
@@ -21,12 +21,12 @@ Each VPC endpoint has a unique tag, which consists of a tag key and a tag value.
 Add a Tag
 ---------
 
-Perform the following operations to add a tag for an existing VPC endpoint:
+Perform the following operations to tag an existing VPC endpoint:
 
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select the required region and project.
 
-3. Choose **Service List** > **Networking** > **VPC Endpoint**.
+3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the VPC endpoint list, locate the target VPC endpoint and click its ID.
 
@@ -34,26 +34,26 @@ Perform the following operations to add a tag for an existing VPC endpoint:
 
 6. Click **Add Tag**.
 
-7. In the displayed dialog box, enter a key and a value.
+7. In the displayed **Add Tag** dialog box, enter a key and a value.
 
-   :ref:`Table 1 <vpcep_03_0206__table183931759191417>` describes the required parameters.
+   :ref:`Table 1 <vpcep_03_0206__table183931759191417>` describes the tag requirements.
 
    .. _vpcep_03_0206__table183931759191417:
 
    .. table:: **Table 1** Tag requirements for VPC endpoints
 
-      +-----------------------------------+------------------------------------------------------------------------+
-      | Parameter                         | Requirement                                                            |
-      +===================================+========================================================================+
-      | Tag key                           | -  Cannot be left blank.                                               |
-      |                                   | -  Must be unique for each resource.                                   |
-      |                                   | -  Can contain a maximum of 36 Unicode characters.                     |
-      |                                   | -  Can contain only letters, digits, hyphens (-), and underscores (_). |
-      +-----------------------------------+------------------------------------------------------------------------+
-      | Tag value                         | -  Cannot be left blank.                                               |
-      |                                   | -  Can contain a maximum of 43 Unicode characters.                     |
-      |                                   | -  Can contain only letters, digits, hyphens (-), and underscores (_). |
-      +-----------------------------------+------------------------------------------------------------------------+
+      +-----------------------------------+--------------------------------------------------------------------------------------+
+      | Parameter                         | Requirement                                                                          |
+      +===================================+======================================================================================+
+      | Tag key                           | -  Cannot be left blank.                                                             |
+      |                                   | -  Must be unique for each resource.                                                 |
+      |                                   | -  Can contain a maximum of 36 characters.                                           |
+      |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
+      +-----------------------------------+--------------------------------------------------------------------------------------+
+      | Tag value                         | -  Cannot be left blank.                                                             |
+      |                                   | -  Can contain a maximum of 43 characters.                                           |
+      |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
+      +-----------------------------------+--------------------------------------------------------------------------------------+
 
 8. Click **OK**.
 
@@ -65,7 +65,7 @@ Perform the following operations to edit a tag of a VPC endpoint:
 #. Log in to the management console.
 #. Click |image2| in the upper left corner and select the required region and project.
 
-3. Choose **Service List** > **Networking** > **VPC Endpoint**.
+3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the VPC endpoint list, locate the target VPC endpoint and click its ID.
 
@@ -75,7 +75,7 @@ Perform the following operations to edit a tag of a VPC endpoint:
 
    .. note::
 
-      You can only edit tags that have values.
+      You can only edit tag values.
 
 8. Click **OK**.
 
@@ -91,7 +91,7 @@ Perform the following operations to delete a tag of a VPC endpoint:
 #. Log in to the management console.
 #. Click |image3| in the upper left corner and select the required region and project.
 
-3. Choose **Service List** > **Networking** > **VPC Endpoint**.
+3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the VPC endpoint list, locate the target VPC endpoint and click its ID.
 

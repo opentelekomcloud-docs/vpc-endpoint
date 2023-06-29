@@ -2,8 +2,8 @@
 
 .. _vpcep_04_0005:
 
-What Are Statuses of VPC Endpoint Services and VPC Endpoints?
-=============================================================
+What Statuses Are Available for a VPC Endpoint Service and VPC Endpoint?
+========================================================================
 
 :ref:`Table 1 <vpcep_04_0005__table740435852615>` describes statuses of a VPC endpoint service and their meanings.
 

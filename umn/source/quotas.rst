@@ -1,17 +1,16 @@
-:original_name: en-us_topic_0154804561.html
+:original_name: vpcep_03_0500.html
 
-.. _en-us_topic_0154804561:
+.. _vpcep_03_0500:
 
-What Is a Quota?
-================
+Quotas
+======
 
+What Is Quota?
+--------------
 
-What Is a Quota?
-----------------
+Quotas can limit the number or amount of resources available to users, such as the maximum number of ECSs or EVS disks that can be created.
 
-Quotas are enforced for service resources on the platform to prevent unforeseen spikes in resource usage. Quotas can limit the number and capacity of resources available to users, for example, how many cloud resources you can create.
-
-You can also increase the quota if the existing quota cannot meet your service requirements.
+If the existing resource quota cannot meet your service requirements, you can apply for a higher quota.
 
 How Do I View My Quotas?
 ------------------------
@@ -45,7 +44,7 @@ Before dialing the hotline number or sending an email, make sure that the follow
    -  Quota type
    -  Required quota
 
-`Learn how to obtain the service hotline and email address. <https://docs.otc.t-systems.com/en-us/public/learnmore.html>`__
+`Learn how to obtain the service hotline and email address. <https://open-telekom-cloud.com/en/contact>`__
 
 .. |image1| image:: /_static/images/en-us_image_0275513364.png
 .. |image2| image:: /_static/images/en-us_image_0152727234.png

@@ -21,7 +21,7 @@ After you connect an IDC to a VPC using VPN or Direct Connect, you can use a VPC
 
    **Figure 1** Access to cloud services
 
-:ref:`Figure 1 <en-us_topic_0131645196__fig08596281506>` shows the process of connecting an IDC to VPC 1 over VPN or Direct Connect, for the purpose of:
+:ref:`Figure 1 <en-us_topic_0131645196__fig08596281506>` shows the process of connecting an IDC to VPC 1 over VPN or Direct Connect, for the purposes of:
 
 -  Accessing OBS or DNS using VPC endpoint 1
 -  Accessing ECS 1 in the same VPC using VPC endpoint 2
@@ -37,7 +37,7 @@ For cloud migration, VPCEP has the following advantages:
 
    With VPCEP, your IDC can access cloud resources over a private network, reducing your costs on public resources.
 
-For details, see :ref:`Configuring a VPC Endpoint for Accessing OBS Using the OBS Private Address <vpcep_02_0300>`.
+For details, see :ref:`Configuring a VPC Endpoint for Accessing the Private IP Address of OBS over Private Networks <vpcep_02_0300>`.
 
 Cross-VPC Connection
 --------------------

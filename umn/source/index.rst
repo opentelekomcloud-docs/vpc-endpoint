@@ -9,6 +9,8 @@ VPC Endpoint - User Guide
    getting_started/index
    vpc_endpoint_services/index
    vpc_endpoints/index
+   permission_management/index
+   quotas
    faq/index
    change_history
    glossary
