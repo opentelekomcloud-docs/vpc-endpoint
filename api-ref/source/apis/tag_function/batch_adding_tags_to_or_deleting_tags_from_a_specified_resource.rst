@@ -2,36 +2,36 @@
 
 .. _vpcep_06_0502:
 
-Batch Adding or Deleting Tags of a Specified Resource
-=====================================================
+Batch Adding Tags to or Deleting Tags from a Specified Resource
+===============================================================
 
 Function
 --------
 
-This API is used to batch add or delete tags for a specified VPC endpoint service or VPC endpoint.
+This API is used to batch add tags to or delete tags from a specified VPC endpoint service or VPC endpoint.
 
--  You can add a maximum of 20 tags to a resource.
+-  You can add up to 20 tags to a resource.
 
 URI
 ---
 
 POST /v1/{project_id}/{resource_type}/{resource_id}/tags/action
 
-:ref:`Table 1 <vpcep_06_0502__table366094812311>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0502__table366094812311>` describes parameters in this URI.
 
 .. _vpcep_06_0502__table366094812311:
 
-.. table:: **Table 1** Parameter description
+.. table:: **Table 1** URI parameters
 
-   +---------------+-----------+--------+-------------------------------------------------------------------------------------+
-   | Parameter     | Mandatory | Type   | Description                                                                         |
-   +===============+===========+========+=====================================================================================+
-   | project_id    | Yes       | String | Specifies the project ID.                                                           |
-   +---------------+-----------+--------+-------------------------------------------------------------------------------------+
-   | resource_type | Yes       | String | Specifies the resource type. The type is **endpoint_service** or **endpoint**.      |
-   +---------------+-----------+--------+-------------------------------------------------------------------------------------+
-   | resource_id   | Yes       | String | Specifies the resource ID, which can be **Endpoint Service ID** or **Endpoint ID**. |
-   +---------------+-----------+--------+-------------------------------------------------------------------------------------+
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter     | Mandatory | Type   | Description                                                                                                                  |
+   +===============+===========+========+==============================================================================================================================+
+   | project_id    | Yes       | String | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | resource_type | Yes       | String | Specifies the resource type, which can be **endpoint_service** or **endpoint**.                                              |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
+   | resource_id   | Yes       | String | Specifies the resource ID, which can be **Endpoint Service ID** or **Endpoint ID**.                                          |
+   +---------------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -64,11 +64,13 @@ Request
       |                 |                                                                                                                      |                 | The value meets the requirements in :ref:`Tag Character Set Specifications <vpcep_06_0504>`.                                                                                                           |
       +-----------------+----------------------------------------------------------------------------------------------------------------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
--  Example request
+-  .. _vpcep_06_0502__li9168649839:
 
-   POST https://127.0.0.1:7443/v1/{project_id}/endpoint_service/{resource_id}/tags/action
+   Example request
 
-   or https://127.0.0.1:7443/v1/{project_id}/endpoint/{resource_id}/tags/action
+   POST https://{endpoint}/v1/{project_id}/endpoint_service/{resource_id}/tags/action
+
+   or https://{endpoint}/v1/{project_id}/endpoint/{resource_id}/tags/action
 
    POST /v1/{project_id}/{resource_type}/{resource_id}/tags/action
 
@@ -110,7 +112,7 @@ Response
 
 None
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

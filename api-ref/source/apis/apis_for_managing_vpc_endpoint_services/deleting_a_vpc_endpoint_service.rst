@@ -5,29 +5,35 @@
 Deleting a VPC Endpoint Service
 ===============================
 
+.. _vpcep_06_0204__section17315029:
+
 Function
 --------
 
 This API is used to delete a VPC endpoint service.
+
+.. note::
+
+   This API is asynchronous. If it is successfully invoked, status code **200** is returned, indicating that the request has been successfully delivered. It takes 1 to 2 minutes to delete a VPC endpoint service. You can view the deletion result by performing operations in :ref:`Querying Details About a VPC Endpoint Service <vpcep_06_0202>`.
 
 URI
 ---
 
 DELETE /v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}
 
-:ref:`Table 1 <vpcep_06_0204__table35049127>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0204__table35049127>` describes parameters in this URI.
 
 .. _vpcep_06_0204__table35049127:
 
-.. table:: **Table 1** Parameters
+.. table:: **Table 1** URI parameters
 
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter               | Mandatory | Description                                                                                                                    |
-   +=========================+===========+================================================================================================================================+
-   | project_id              | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | vpc_endpoint_service_id | Yes       | Specifies the ID of the VPC endpoint service.                                                                                  |
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter               | Mandatory | Description                                                                                                                  |
+   +=========================+===========+==============================================================================================================================+
+   | project_id              | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | vpc_endpoint_service_id | Yes       | Specifies the ID of the VPC endpoint service.                                                                                |
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -49,7 +55,7 @@ Response
 
 None
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

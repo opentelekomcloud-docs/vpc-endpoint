@@ -20,7 +20,7 @@ Request
 
 -  Parameters
 
-   .. table:: **Table 1** Request parameters
+   .. table:: **Table 1** Request parameter
 
       +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------+
       | Parameter       | Mandatory       | Type            | Description                                                                    |
@@ -37,9 +37,9 @@ Request
 Response
 --------
 
--  Parameters
+-  Parameter
 
-   .. table:: **Table 2** Response parameters
+   .. table:: **Table 2** Response parameter
 
       +-----------+--------+------------------------------------------------------------------------------------------------------+
       | Parameter | Type   | Description                                                                                          |
@@ -49,7 +49,7 @@ Response
 
    .. _vpcep_06_0102__table13687304356:
 
-   .. table:: **Table 3** **VersionModel** parameters
+   .. table:: **Table 3** VersionModel parameters
 
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                           |
@@ -75,7 +75,7 @@ Response
 
    .. _vpcep_06_0102__table2072420713363:
 
-   .. table:: **Table 4** **VersionLink** parameters
+   .. table:: **Table 4** VersionLink parameters
 
       +-----------+--------+-----------------------------------------------------------------------------------------------+
       | Parameter | Type   | Description                                                                                   |
@@ -110,7 +110,7 @@ Response
         }
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

@@ -2,8 +2,8 @@
 
 .. _vpcep_08_0001:
 
-Status Code
-===========
+Status Codes
+============
 
 -  Normal
 
@@ -19,7 +19,7 @@ Status Code
 
 -  Abnormal
 
-   .. table:: **Table 2** Return code for failed requests
+   .. table:: **Table 2** Return codes for failed requests
 
       +-------------+-------------------------------+--------------------------------------------------------------------------------------------+
       | Status Code | Returned Value                | Description                                                                                |

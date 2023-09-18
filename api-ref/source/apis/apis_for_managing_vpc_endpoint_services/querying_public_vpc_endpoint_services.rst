@@ -15,54 +15,60 @@ URI
 
 GET /v1/{project_id}/vpc-endpoint-services/public?limit={limit}&offset={offset}&endpoint_service_name={endpoint_service_name}&id={endpoint_service_id}&sort_key={sort_key}&sort_dir={sort_dir}
 
-:ref:`Table 1 <vpcep_06_0301__table52235709>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0301__table52235709>` describes parameters in this URI.
 
 .. _vpcep_06_0301__table52235709:
 
-.. table:: **Table 1** Parameters
+.. table:: **Table 1** URI parameter
 
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter  | Mandatory | Description                                                                                                                    |
-   +============+===========+================================================================================================================================+
-   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Description                                                                                                                  |
+   +============+===========+==============================================================================================================================+
+   | project_id | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+
+.. _vpcep_06_0301__table15507252:
+
+.. table:: **Table 2** Query parameters
+
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory       | Type            | Description                                                                                                                                                  |
+   +=======================+=================+=================+==============================================================================================================================================================+
+   | limit                 | No              | Integer         | Specifies the maximum number of public VPC endpoint services displayed on each page.                                                                         |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | The number ranges from **0** to **1000** and is generally **10**, **20**, or **50**. The default number is **10**.                                           |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | offset                | No              | Integer         | Specifies the offset.                                                                                                                                        |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | All VPC endpoint services after this offset will be queried. The offset must be an integer greater than 0 but less than the number of VPC endpoint services. |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | endpoint_service_name | No              | String          | Specifies the name of the public VPC endpoint service. The value is not case-sensitive and supports fuzzy match.                                             |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | id                    | No              | String          | Specifies the unique ID of the public VPC endpoint service.                                                                                                  |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | sort_key              | No              | String          | Specifies the sorting field of the VPC endpoint service list. The field can be:                                                                              |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | -  **created_at**: VPC endpoint services are sorted by creation time.                                                                                        |
+   |                       |                 |                 | -  **updated_at**: VPC endpoint services are sorted by update time.                                                                                          |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | The default field is **created_at**.                                                                                                                         |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | sort_dir              | No              | String          | Specifies the sorting method of the VPC endpoint service list. The method can be:                                                                            |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | -  **desc**: VPC endpoint services are sorted in descending order.                                                                                           |
+   |                       |                 |                 | -  **asc**: VPC endpoint services are sorted in ascending order.                                                                                             |
+   |                       |                 |                 |                                                                                                                                                              |
+   |                       |                 |                 | The default method is **desc**.                                                                                                                              |
+   +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
 
--  Parameter description
+-  .. _vpcep_06_0301__li45449305443:
 
-   .. table:: **Table 2** Request parameters
+   Parameter description
 
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter             | Mandatory       | Type            | Description                                                                                                                                                  |
-      +=======================+=================+=================+==============================================================================================================================================================+
-      | limit                 | No              | Integer         | Specifies the maximum number of public VPC endpoint services displayed on each page.                                                                         |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | The value ranges from **0** to **1000** and is generally **10**, **20**, or **50**. The default value is **10**.                                             |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | offset                | No              | Integer         | Specifies the offset.                                                                                                                                        |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | All VPC endpoint services after this offset will be queried. The offset must be an integer greater than 0 but less than the number of VPC endpoint services. |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | endpoint_service_name | No              | String          | Specifies the name of the public VPC endpoint service. The value is not case-sensitive and supports fuzzy match.                                             |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | id                    | No              | String          | Specifies the unique ID of the public VPC endpoint service.                                                                                                  |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | sort_key              | No              | String          | Specifies the sorting field of the VPC endpoint service list. The field can be:                                                                              |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | -  **create_at**: indicates that VPC endpoint services are sorted by creation time.                                                                          |
-      |                       |                 |                 | -  **update_at**: indicates that VPC endpoint services are sorted by update time.                                                                            |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | The default field is **create_at**.                                                                                                                          |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | sort_dir              | No              | String          | Specifies the sorting method of the VPC endpoint service list. The method can be:                                                                            |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | -  **desc**: indicates that VPC endpoint services are sorted in the descending order.                                                                        |
-      |                       |                 |                 | -  **asc**: indicates that VPC endpoint services are sorted in the ascending order.                                                                          |
-      |                       |                 |                 |                                                                                                                                                              |
-      |                       |                 |                 | The default method is **desc**.                                                                                                                              |
-      +-----------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   None
 
 -  Example request
 
@@ -87,7 +93,7 @@ Response
 
    .. _vpcep_06_0301__table55935485:
 
-   .. table:: **Table 4** **endpoint_service** parameters
+   .. table:: **Table 4** endpoint_service parameters
 
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                                                                                                                                      |
@@ -141,7 +147,7 @@ Response
         "total_count": 2
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.

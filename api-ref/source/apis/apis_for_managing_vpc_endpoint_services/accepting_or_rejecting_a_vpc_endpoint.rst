@@ -15,19 +15,19 @@ URI
 
 POST /v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/connections/action
 
-:ref:`Table 1 <vpcep_06_0207__table25752879>` describes the required parameters.
+:ref:`Table 1 <vpcep_06_0207__table25752879>` describes parameters in this URI.
 
 .. _vpcep_06_0207__table25752879:
 
-.. table:: **Table 1** Parameters
+.. table:: **Table 1** URI parameters
 
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter               | Mandatory | Description                                                                                                                    |
-   +=========================+===========+================================================================================================================================+
-   | project_id              | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003_0>`. |
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
-   | vpc_endpoint_service_id | Yes       | Specifies the ID of the VPC endpoint service.                                                                                  |
-   +-------------------------+-----------+--------------------------------------------------------------------------------------------------------------------------------+
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter               | Mandatory | Description                                                                                                                  |
+   +=========================+===========+==============================================================================================================================+
+   | project_id              | Yes       | Specifies the project ID. For details about how to obtain the project ID, see :ref:`Obtaining a Project ID <vpcep_08_0003>`. |
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
+   | vpc_endpoint_service_id | Yes       | Specifies the ID of the VPC endpoint service.                                                                                |
+   +-------------------------+-----------+------------------------------------------------------------------------------------------------------------------------------+
 
 Request
 -------
@@ -69,7 +69,9 @@ Response
 
 -  Parameter description
 
-   .. table:: **Table 3** Response parameters
+   .. _vpcep_06_0207__table50476419:
+
+   .. table:: **Table 3** Response parameter
 
       +-------------+------------------+----------------------------------------------------------------------------------------+
       | Parameter   | Type             | Description                                                                            |
@@ -79,7 +81,7 @@ Response
 
    .. _vpcep_06_0207__table31325900:
 
-   .. table:: **Table 4** Connection parameters
+   .. table:: **Table 4** connection parameters
 
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                                                                                    |
@@ -100,8 +102,12 @@ Response
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | status                | String                | Specifies the connection status of the VPC endpoint.                                                                                                           |
       |                       |                       |                                                                                                                                                                |
-      |                       |                       | -  **accepted**: indicates the VPC endpoint has been accepted.                                                                                                 |
-      |                       |                       | -  **rejected**: indicates the VPC endpoint has been rejected.                                                                                                 |
+      |                       |                       | -  **pendingAcceptance**: The VPC endpoint is to be accepted.                                                                                                  |
+      |                       |                       | -  **creating**: The VPC endpoint is being created.                                                                                                            |
+      |                       |                       | -  **accepted**: The VPC endpoint has been accepted.                                                                                                           |
+      |                       |                       | -  **rejected**: The VPC endpoint has been rejected.                                                                                                           |
+      |                       |                       | -  **failed**: The VPC endpoint failed to be created.                                                                                                          |
+      |                       |                       | -  **deleting**: The VPC endpoint is being deleted.                                                                                                            |
       +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | error                 | Array of objects      | Specifies the error message.                                                                                                                                   |
       |                       |                       |                                                                                                                                                                |
@@ -131,8 +137,8 @@ Response
             "status":"accepted",
             "marker_id":422321321312321321,
             "domain_id":"6e9dfd51d1124e8d8498dce894923a0d",
-            "created_at":"2018-01-30T07:42:01.174",
-            "updated_at":"2018-01-30T07:42:01.174"
+            "created_at":"2018-01-30T07:42:01Z",
+            "updated_at":"2018-01-30T07:42:01Z"
              }
          ]
       }
@@ -146,7 +152,7 @@ Response
         "error_msg": "The endpoint does not belong to the endpoint service."
       }
 
-Status Code
------------
+Status Codes
+------------
 
-For details about status codes, see :ref:`Status Code <vpcep_08_0001>`.
+See :ref:`Status Codes <vpcep_08_0001>`.
