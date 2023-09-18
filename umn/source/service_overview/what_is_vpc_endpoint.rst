@@ -48,4 +48,4 @@ A web-based console and HTTPS APIs are provided for you to access VPCEP.
 
 -  APIs
 
-   Access VPCEP by calling APIs if you need to integrate VPCEP into a third-party system for secondary development. For details, see `VPC Endpoint API Reference <https://docs.otc.t-systems.com/en-us/api/vpcep/vpcep_05_0000.html>`__.
+   Use this method if you need to integrate VPCEP into a third-party system for secondary development. For details, see `VPC Endpoint API Reference <https://docs.otc.t-systems.com/en-us/api/vpcep/vpcep_05_0000.html>`__.

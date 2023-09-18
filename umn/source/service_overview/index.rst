@@ -10,6 +10,7 @@ Service Overview
 -  :ref:`Application Scenarios <en-us_topic_0131645196>`
 -  :ref:`Constraints <vpcep_01_0005>`
 -  :ref:`VPCEP and Other Services <vpcep_01_0007>`
+-  :ref:`Permissions <vpcep_pd_0001>`
 -  :ref:`Product Concepts <vpcep_01_0009>`
 
 .. toctree::
@@ -21,4 +22,5 @@ Service Overview
    application_scenarios
    constraints
    vpcep_and_other_services
+   permissions
    product_concepts/index

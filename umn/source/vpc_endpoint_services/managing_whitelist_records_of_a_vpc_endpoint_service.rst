@@ -10,7 +10,7 @@ Scenarios
 
 Permission management controls the access of a VPC endpoint in one domain to a VPC endpoint service in another.
 
-After a VPC endpoint service is created, you can add an authorized domain ID to or delete it from the whitelist of the endpoint service.
+After a VPC endpoint service is created, you can add an authorized domain ID to or delete it from the whitelist of the VPC endpoint service.
 
 -  If the whitelist is empty, access from a VPC endpoint in another domain is not allowed.
 -  If an authorized domain ID is already in the whitelist, you can use this domain to create a VPC endpoint for connecting to the VPC endpoint service.
@@ -24,7 +24,7 @@ Add a Whitelist Record
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select the required region and project.
 
-3. Choose **Service List** > **Networking** > **VPC Endpoint**.
+3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
 
@@ -56,7 +56,7 @@ Delete a Whitelist Record
 #. Log in to the management console.
 #. Click |image2| in the upper left corner and select the required region and project.
 
-3. Choose **Service List** > **Networking** > **VPC Endpoint**.
+3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
 

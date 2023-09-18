@@ -2,8 +2,8 @@
 
 .. _vpcep_02_0300:
 
-Configuring a VPC Endpoint for Accessing OBS Using the OBS Private Address
-==========================================================================
+Configuring a VPC Endpoint for Accessing the Private IP Address of OBS over Private Networks
+============================================================================================
 
 -  :ref:`Overview <vpcep_02_0301>`
 -  :ref:`Step 1: Create a VPC Endpoint for Connecting to DNS <vpcep_02_0302>`

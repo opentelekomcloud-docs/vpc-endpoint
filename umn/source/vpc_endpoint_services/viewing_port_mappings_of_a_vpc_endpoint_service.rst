@@ -12,9 +12,9 @@ After a VPC endpoint service is created, you can view the added port mappings.
 
 A port mapping defines the protocol and ports used for communications between a VPC endpoint and a VPC endpoint service.
 
--  Protocol: A protocol both supported by the VPC endpoint and VPC endpoint service
--  Service Port: A service port is provided by the backend service bound to the endpoint service.
--  Terminal Port: A terminal port is provided by the VPC endpoint, allowing you to access the VPC endpoint service.
+-  **Protocol**: a protocol both supported by the VPC endpoint and VPC endpoint service
+-  **Service Port**: provided by the backend resource bound to the VPC endpoint service.
+-  **Terminal Port**: provided by the VPC endpoint, allowing you to access the VPC endpoint service.
 
 Procedure
 ---------
@@ -22,7 +22,7 @@ Procedure
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select the required region and project.
 
-3. Choose **Service List** > **Networking** > **VPC Endpoint**.
+3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
 
@@ -30,7 +30,7 @@ Procedure
 
 6. On the displayed page, select the **Port Mapping** tab.
 
-   The port mapping configured for the VPC endpoint service is displayed.
+   The port mappings configured for the VPC endpoint service are displayed.
 
 
    .. figure:: /_static/images/en-us_image_0000001124517799.png

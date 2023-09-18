@@ -12,9 +12,9 @@ With VPCEP, you can access resources across VPCs in the same region.
 
 Cloud resources in different VPCs are isolated from each other and cannot be accessed using private IP addresses. After you create a VPC endpoint, you can use a private IP address to access resources across two VPCs despite of network isolation between them.
 
-This section describes how cloud resources in VPCs of different domains in the same region can communicate with each other across VPCs.
+This section describes how cloud resources in VPCs of different domains in the same region can communicate with each other.
 
-VPC 1 and VPC 2 belong to different domains. You can take the ELB in VPC 2 as a VPC endpoint service and create a VPC endpoint in VPC 1 so that the ECS in VPC 1 can access the ELB in VPC 2 using the private IP address.
+VPC 1 and VPC 2 belong to different domains. You can configure ELB in VPC 2 as a VPC endpoint service and create a VPC endpoint in VPC 1 so that the ECS in VPC 1 can access ELB in VPC 2 using the private IP address.
 
 
 .. figure:: /_static/images/en-us_image_0298376151.png

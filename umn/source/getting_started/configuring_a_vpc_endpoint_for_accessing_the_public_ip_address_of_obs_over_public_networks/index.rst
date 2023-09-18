@@ -2,8 +2,8 @@
 
 .. _vpcep_02_0400:
 
-Configuring a VPC Endpoint for Accessing OBS with the OBS Public Address
-========================================================================
+Configuring a VPC Endpoint for Accessing the Public IP Address of OBS over Public Networks
+==========================================================================================
 
 -  :ref:`Overview <vpcep_02_0401>`
 -  :ref:`Step 1: Create a VPC Endpoint for Connecting to OBS <vpcep_02_0402>`
