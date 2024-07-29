@@ -10,7 +10,7 @@ A VPC endpoint service is a cloud service or a private service that can be acces
 There are two types of VPC endpoint services: gateway and interface.
 
 -  Gateway VPC endpoint services are created only for cloud services.
--  Interface VPC endpoint services can be created for both cloud services and your private services. All VPC endpoint services for cloud services are created by default while those for private services need to be created by users themselves.
+-  Interface VPC endpoint services can be created for both cloud services and your private services. Cloud services are configured as VPC endpoint services by the O&M personnel by default. However, you need to create VPC endpoint services for your private services.
 
 Gateway VPC Endpoint Services
 -----------------------------
@@ -64,7 +64,11 @@ Interface VPC endpoint services are mainly configured from:
    |                      |                        |             |                                |                                                                                                                                                          |
    |                      |                        |             |    com.t-systems.otc.eu-nl.dns |                                                                                                                                                          |
    +----------------------+------------------------+-------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Load balancer        | Users' private service | Interface   | None                           | Select a load balancer as the backend resource if your services receive high traffic and demand high reliability and disaster recovery (DR) performance. |
+   | API Gateway          | Cloud service          | Interface   | eu-de:                         | Select the endpoint service ending with **apig** if you want to access API Gateway using a VPC endpoint.                                                 |
+   |                      |                        |             |                                |                                                                                                                                                          |
+   |                      |                        |             | com.t-systems.otc.eu-de.apig   | Only the eu-de region supports the API gateway VPC endpoint service.                                                                                     |
+   +----------------------+------------------------+-------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ELB                  | Users' private service | Interface   | None                           | Select a load balancer as the backend resource if your services receive high traffic and demand high reliability and disaster recovery (DR) performance. |
    +----------------------+------------------------+-------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
    | ECS                  | Users' private service | Interface   | None                           | VPC endpoint services work as servers.                                                                                                                   |
    +----------------------+------------------------+-------------+--------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+

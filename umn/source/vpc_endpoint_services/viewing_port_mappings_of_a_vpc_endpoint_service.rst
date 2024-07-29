@@ -26,16 +26,16 @@ Procedure
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
 
-5. In the VPC endpoint service list, locate the target VPC endpoint service and click its name.
+5. In the VPC endpoint service list, locate the VPC endpoint service and click its name.
 
 6. On the displayed page, select the **Port Mapping** tab.
 
    The port mappings configured for the VPC endpoint service are displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001124517799.png
+   .. figure:: /_static/images/en-us_image_0000001979891909.png
       :alt: **Figure 1** Port Mapping
 
       **Figure 1** Port Mapping
 
-.. |image1| image:: /_static/images/en-us_image_0289945877.png
+.. |image1| image:: /_static/images/en-us_image_0000001979891813.png

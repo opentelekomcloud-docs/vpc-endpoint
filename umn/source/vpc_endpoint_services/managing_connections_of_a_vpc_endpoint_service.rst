@@ -27,12 +27,12 @@ Procedure
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
 
-5. In the VPC endpoint service list, locate the target VPC endpoint service and click its name.
+5. In the VPC endpoint service list, locate the VPC endpoint service and click its name.
 
 6. Select the **Connection Management** tab.
 
 
-   .. figure:: /_static/images/en-us_image_0000001124399267.png
+   .. figure:: /_static/images/en-us_image_0000001979891897.png
       :alt: **Figure 1** Connection Management
 
       **Figure 1** Connection Management
@@ -42,4 +42,4 @@ Procedure
    -  If you click **Accept**, the VPC endpoint can connect to the VPC endpoint service.
    -  If you click **Reject**, the VPC endpoint cannot connect to the VPC endpoint service.
 
-.. |image1| image:: /_static/images/en-us_image_0289945877.png
+.. |image1| image:: /_static/images/en-us_image_0000001979891813.png

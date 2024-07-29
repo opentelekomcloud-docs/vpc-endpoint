@@ -29,7 +29,7 @@ Procedure
    The **Create VPC Endpoint** page is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001630482677.png
+   .. figure:: /_static/images/en-us_image_0000001949673460.png
       :alt: **Figure 1** Create VPC Endpoint
 
       **Figure 1** Create VPC Endpoint
@@ -43,18 +43,18 @@ Procedure
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                                                          |
       +===================================+======================================================================================================================================================+
-      | Region                            | Specifies the region where the VPC endpoint is to be located.                                                                                        |
+      | Region                            | Specifies the region where the VPC endpoint is to be deployed.                                                                                       |
       |                                   |                                                                                                                                                      |
       |                                   | Resources in different regions cannot communicate with each other over an intranet. For lower latency and quicker access, select the nearest region. |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Service Category                  | There are two options:                                                                                                                               |
       |                                   |                                                                                                                                                      |
-      |                                   | -  **Cloud services**: Select this value if the target VPC endpoint service is a cloud service.                                                      |
-      |                                   | -  **Find a service by name**: Select this value if the target VPC endpoint service is a private service of your own.                                |
+      |                                   | -  **Cloud service**: Select this option if the VPC endpoint service to be accessed is a cloud service.                                              |
+      |                                   | -  **Find a service by name**: Select this option if the VPC endpoint service to be accessed is a private service of your own.                       |
       |                                   |                                                                                                                                                      |
-      |                                   | In this example, select **Cloud services**.                                                                                                          |
+      |                                   | In this example, select **Cloud service**.                                                                                                           |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Service List                      | This parameter is available only when you select **Cloud services** for **Service Category**.                                                        |
+      | Service List                      | This parameter is available only when you select **Cloud service** for **Service Category**.                                                         |
       |                                   |                                                                                                                                                      |
       |                                   | The VPC endpoint service has been created by the O&M personnel and you can directly use it.                                                          |
       |                                   |                                                                                                                                                      |
@@ -62,7 +62,11 @@ Procedure
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | VPC                               | Specifies the VPC where the VPC endpoint is to be deployed.                                                                                          |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Subnet                            | Specifies the subnet where the VPC endpoint is to be located.                                                                                        |
+      | Subnet                            | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                       |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Route Table                       | This parameter is available only when you create a VPC endpoint for connecting to a gateway VPC endpoint service.                                    |
+      |                                   |                                                                                                                                                      |
+      |                                   | Select a route table for the VPC where the VPC endpoint is to be deployed.                                                                           |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Tag                               | This parameter is optional.                                                                                                                          |
       |                                   |                                                                                                                                                      |
@@ -89,8 +93,7 @@ Procedure
       |                                   | -  Can contain a maximum of 36 characters.                                           |
       |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
       +-----------------------------------+--------------------------------------------------------------------------------------+
-      | Tag value                         | -  Cannot be left blank.                                                             |
-      |                                   | -  Can contain a maximum of 43 characters.                                           |
+      | Tag value                         | -  Can contain a maximum of 43 characters.                                           |
       |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
       +-----------------------------------+--------------------------------------------------------------------------------------+
 
@@ -105,12 +108,12 @@ Procedure
 
    If the status of the VPC endpoint changes from **Creating** to **Accepted**, the VPC endpoint for connecting to **com.t-systems.otc.eu-de.obs** is created.
 
-#. In the VPC endpoint list, click the ID of the target VPC endpoint to view its details.
+#. In the VPC endpoint list, click the ID of the VPC endpoint to view its details.
 
 
-   .. figure:: /_static/images/en-us_image_0289945946.png
+   .. figure:: /_static/images/en-us_image_0000001979891821.png
       :alt: **Figure 2** Summary of the VPC endpoint
 
       **Figure 2** Summary of the VPC endpoint
 
-.. |image1| image:: /_static/images/en-us_image_0289945877.png
+.. |image1| image:: /_static/images/en-us_image_0000001979891813.png

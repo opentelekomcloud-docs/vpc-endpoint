@@ -18,7 +18,7 @@ This section describes how to create such a VPC endpoint to access OBS.
 
 .. _vpcep_02_0401__fig1589611845912:
 
-.. figure:: /_static/images/en-us_image_0298570037.png
+.. figure:: /_static/images/en-us_image_0000001949612340.png
    :alt: **Figure 1** Accessing OBS using its public address from an IDC
 
    **Figure 1** Accessing OBS using its public address from an IDC
@@ -38,7 +38,7 @@ Configuration Process
 
 .. _vpcep_02_0401__fig17254219184910:
 
-.. figure:: /_static/images/en-us_image_0298571864.png
+.. figure:: /_static/images/en-us_image_0000001949612332.png
    :alt: **Figure 2** Configuration flowchart
 
    **Figure 2** Configuration flowchart
