@@ -30,7 +30,7 @@ Perform the following operations to tag an existing VPC endpoint service:
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
 
-5. In the VPC endpoint service list, locate the target VPC endpoint service and click its name.
+5. In the VPC endpoint service list, locate the VPC endpoint service and click its name.
 
 6. On the displayed page, select the **Tags** tab.
 
@@ -52,8 +52,7 @@ Perform the following operations to tag an existing VPC endpoint service:
       |                                   | -  Can contain a maximum of 36 characters.                                           |
       |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
       +-----------------------------------+--------------------------------------------------------------------------------------+
-      | Tag value                         | -  Cannot be left blank.                                                             |
-      |                                   | -  Can contain a maximum of 43 characters.                                           |
+      | Tag value                         | -  Can contain a maximum of 43 characters.                                           |
       |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
       +-----------------------------------+--------------------------------------------------------------------------------------+
 
@@ -70,9 +69,9 @@ Perform the following operations to edit a tag of a VPC endpoint service:
 3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
-5. In the VPC endpoint service list, locate the target VPC endpoint service and click its name.
+5. In the VPC endpoint service list, locate the VPC endpoint service and click its name.
 6. On the displayed page, select the **Tags** tab.
-7. In the tag list, locate the target tag and click **Edit** in the **Operation** column.
+7. In the tag list, locate the tag and click **Edit** in the **Operation** column.
 8. Enter a new value.
 
    .. note::
@@ -96,11 +95,11 @@ Perform the following operations to delete a tag of a VPC endpoint service:
 3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
 4. In the navigation pane on the left, choose **VPC Endpoint** > **VPC Endpoint Services**.
-5. In the VPC endpoint service list, locate the target VPC endpoint service and click its name.
+5. In the VPC endpoint service list, locate the VPC endpoint service and click its name.
 6. On the displayed page, select the **Tags** tab.
-7. In the tag list, locate the target tag and click **Delete** in the **Operation** column.
+7. In the tag list, locate the tag and click **Delete** in the **Operation** column.
 8. Click **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0289945877.png
-.. |image2| image:: /_static/images/en-us_image_0289945877.png
-.. |image3| image:: /_static/images/en-us_image_0289945877.png
+.. |image1| image:: /_static/images/en-us_image_0000001979891813.png
+.. |image2| image:: /_static/images/en-us_image_0000001979891813.png
+.. |image3| image:: /_static/images/en-us_image_0000001979891813.png

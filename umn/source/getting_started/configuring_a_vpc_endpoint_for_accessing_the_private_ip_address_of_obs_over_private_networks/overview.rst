@@ -14,12 +14,12 @@ This section describes how to use a VPC endpoint to access OBS (private address)
 
 .. _vpcep_02_0301__fig1589611845912:
 
-.. figure:: /_static/images/en-us_image_0298583614.png
+.. figure:: /_static/images/en-us_image_0000001980011633.png
    :alt: **Figure 1** Accessing OBS (private address) from an on-premises data center
 
    **Figure 1** Accessing OBS (private address) from an on-premises data center
 
-:ref:`Figure 1 <vpcep_02_0301__fig1589611845912>` shows the process of connecting the on-premise data center to a VPC over VPN or Direct Connect, and then using two VPC endpoints to access DNS and OBS, respectively.
+:ref:`Figure 1 <vpcep_02_0301__fig1589611845912>` shows the process of connecting the on-premises data center to a VPC over VPN or Direct Connect, and then using two VPC endpoints to enable the on-premises data center to access DNS and OBS, respectively.
 
 A VPC endpoint comes with a VPC endpoint service. Before you create a VPC endpoint, ensure that the VPC endpoint service that you want to access is available.
 
@@ -40,7 +40,7 @@ Configuration Process
 
 .. _vpcep_02_0301__fig11842192183914:
 
-.. figure:: /_static/images/en-us_image_0298561817.png
+.. figure:: /_static/images/en-us_image_0000001979891761.png
    :alt: **Figure 2** Configuration flowchart
 
    **Figure 2** Configuration flowchart

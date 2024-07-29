@@ -28,10 +28,10 @@ Procedure
 
 #. .. _vpcep_02_0304__li146041853163516:
 
-   In the VPC endpoint list, locate the target VPC endpoint and click the ID of the endpoint to view its details.
+   In the VPC endpoint list, locate the VPC endpoint and click the ID of the endpoint to view its details.
 
 
-   .. figure:: /_static/images/en-us_image_0289945827.png
+   .. figure:: /_static/images/en-us_image_0000001980011629.png
       :alt: **Figure 1** Summary of the VPC endpoint
 
       **Figure 1** Summary of the VPC endpoint
@@ -91,14 +91,14 @@ Procedure
 
    .. code-block::
 
-      telnet bucket.endpoint
+      telnet bucketname.endpoint
 
    In the command:
 
-   -  *bucket*: indicates the bucket name.
-   -  *endpoint*: indicates the OBS endpoint.
+   -  *bucketname*: indicates the bucket name.
+   -  *endpoint*: indicates the endpoint (domain name) of the region where the bucket is deployed.
 
-   Example: **telnet** **bucket.obs.eu-de.otc.t-systems.com**
+   Example: **telnet** **bucketname.obs.eu-de.otc.t-systems.com**
 
    .. note::
 

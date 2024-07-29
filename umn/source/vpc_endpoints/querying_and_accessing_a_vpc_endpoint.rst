@@ -10,17 +10,24 @@ Scenarios
 
 After a VPC endpoint is created, you can query its details and access it.
 
+Constraints
+-----------
+
+One VPC endpoint supports up to 3,000 concurrent connections.
+
+.. _vpcep_03_0202__section19334124820566:
+
 Querying a VPC Endpoint
 -----------------------
 
-Perform the following operations to query details about a VPC endpoint, including its ID, associated VPC endpoint service name, VPC, and status.
+Perform the following operations to query details of a VPC endpoint, including its ID, associated VPC endpoint service name, VPC, and status.
 
 #. Log in to the management console.
 #. Click |image1| in the upper left corner and select the required region and project.
 
 3. Click **Service List** and choose **Networking** > **VPC Endpoint**.
 
-   On the displayed page, locate the target VPC endpoint by entering a keyword in the search box in the upper right corner:
+   On the displayed page, locate the VPC endpoint by entering a keyword in the search box in the upper right corner:
 
    -  Search by VPC endpoint service name or VPC endpoint ID.
 
@@ -34,64 +41,80 @@ Perform the following operations to query details about a VPC endpoint, includin
 
    -  Search by tag.
 
-      a. Click |image3| to the right of **Search by Tag**.
+      a. Click the filter box and select keys from the drop-down list.
 
 
-         .. figure:: /_static/images/en-us_image_0000001124400993.png
-            :alt: **Figure 1** Search by Tag
+         .. figure:: /_static/images/en-us_image_0000001999152565.png
+            :alt: **Figure 1** Selecting tag keys
 
-            **Figure 1** Search by Tag
+            **Figure 1** Selecting tag keys
 
-      b. Enter a tag and a value.
+      b. Select tag values for the selected tag keys.
 
-         You can also select a key or value from the drop-down list.
 
-         You can use a maximum of 20 tags to search for a VPC endpoint.
+         .. figure:: /_static/images/en-us_image_0000001963188988.png
+            :alt: **Figure 2** Selecting tag values
 
-      c. Click **Search**.
+            **Figure 2** Selecting tag values
 
-         VPC endpoints containing the specified tag are displayed in the VPC endpoint list.
+      c. View the search result.
 
-         If you set multiple tags, VPC endpoints containing all the specified tags will be displayed.
+         The VPC endpoint list displays the VPC endpoints that match the specified tags.
 
-4. In the VPC endpoint list, click the ID of the target VPC endpoint to view its details.
+4. In the VPC endpoint list, click the ID of the VPC endpoint to view its details.
 
    After an interface VPC endpoint is created, a private IP address is assigned together with a private domain name if you select **Create a Private Domain Name**.
 
    .. _vpcep_03_0202__fig735142618538:
 
-   .. figure:: /_static/images/en-us_image_0000001632178569.png
-      :alt: **Figure 2** Summary of the VPC endpoint
+   .. figure:: /_static/images/en-us_image_0000001999128697.png
+      :alt: **Figure 3** **Summary** of the VPC endpoint (for accessing an interface VPC endpoint service)
 
-      **Figure 2** Summary of the VPC endpoint
+      **Figure 3** **Summary** of the VPC endpoint (for accessing an interface VPC endpoint service)
 
-   .. table:: **Table 1** Parameters contained in details of a VPC endpoint
 
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      | Tab     | Parameter                 | Description                                                                                            |
-      +=========+===========================+========================================================================================================+
-      | Summary | ID                        | Specifies the ID of the VPC endpoint.                                                                  |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | VPC                       | Specifies the VPC where the VPC endpoint is deployed.                                                  |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | VPC Endpoint Service Name | Specifies the name of the VPC endpoint service that the VPC endpoint is used to access.                |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Private IP Address        | Specifies the IP address for accessing the VPC endpoint.                                               |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Private Domain Name       | Specifies the private domain name for accessing the VPC endpoint.                                      |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Status                    | Specifies the status of the VPC endpoint.                                                              |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Type                      | Specifies the type of the VPC endpoint service that the VPC endpoint is used to access.                |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Assigned                  | Specifies the creation time of the VPC endpoint.                                                       |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      | Tags    | Key                       | Specifies the tag key of the VPC endpoint.                                                             |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Value                     | Specifies the tag value of the VPC endpoint.                                                           |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
-      |         | Operation                 | Specifies the operation to be performed on the VPC endpoint tag. You can click **Edit** or **Delete**. |
-      +---------+---------------------------+--------------------------------------------------------------------------------------------------------+
+   .. figure:: /_static/images/en-us_image_0000001962828294.png
+      :alt: **Figure 4** **Summary** of the VPC endpoint (for accessing a gateway VPC endpoint service)
+
+      **Figure 4** **Summary** of the VPC endpoint (for accessing a gateway VPC endpoint service)
+
+   .. table:: **Table 1** Parameters contained in the details of a VPC endpoint
+
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Tab          | Parameter                 | Description                                                                                                         |
+      +==============+===========================+=====================================================================================================================+
+      | Summary      | ID                        | Specifies the ID of the VPC endpoint.                                                                               |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | VPC                       | Specifies the VPC where the VPC endpoint is deployed.                                                               |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | VPC Endpoint Service Name | Specifies the name of the VPC endpoint service that the VPC endpoint is used to access.                             |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | IPv4 Address              | Specifies the IPv4 address of the VPC endpoint.                                                                     |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | Private Domain Name       | Specifies the private domain name for accessing the VPC endpoint.                                                   |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | Status                    | Specifies the status of the VPC endpoint.                                                                           |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | Type                      | Specifies the type of the VPC endpoint service that the VPC endpoint is used to access.                             |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Summary      | Created                   | Specifies the creation time of the VPC endpoint.                                                                    |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Route Tables | Name                      | Specifies the name of the route table.                                                                              |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Route Tables | VPC                       | Specifies the VPC that the route table belongs to.                                                                  |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Route Tables | Type                      | Specifies the type of the route table, which can be **Default** and **Custom**.                                     |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Route Tables | Associated Subnets        | Specifies the number of subnets associated with the route table.                                                    |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Route Tables | Operation                 | Specifies the operation to be performed on the route table. The operation can be **Disassociate** or **Associate**. |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Tags         | Key                       | Specifies the tag key of the VPC endpoint.                                                                          |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Tags         | Value                     | Specifies the tag value of the VPC endpoint.                                                                        |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
+      | Tags         | Operation                 | Specifies the operation to be performed on the VPC endpoint tag. You can click **Edit** or **Delete**.              |
+      +--------------+---------------------------+---------------------------------------------------------------------------------------------------------------------+
 
 Accessing a VPC Endpoint via Its Private IP Address
 ---------------------------------------------------
@@ -129,19 +152,19 @@ You can view the corresponding private zone and its resolution records on the DN
 
    The **Private Zones** page is displayed.
 
-4. In the private zone list, click the name of the target private zone.
+4. In the private zone list, click the name of the private zone.
 
    The **Record Sets** page is displayed.
 
-5. In the record set list, locate the target A record set and view its information.
+5. In the record set list, locate the A record set and view its information.
 
    When **Status** changes to **Normal**, the resolution takes effect.
 
 
-   .. figure:: /_static/images/en-us_image_0289945896.png
-      :alt: **Figure 3** Record set of the private domain name
+   .. figure:: /_static/images/en-us_image_0000001979891945.png
+      :alt: **Figure 5** Record set of the private domain name
 
-      **Figure 3** Record set of the private domain name
+      **Figure 5** Record set of the private domain name
 
 **Accessing a VPC endpoint via its private domain name**
 
@@ -155,6 +178,5 @@ You can view the corresponding private zone and its resolution records on the DN
 
    **curl** *Private domain name:Port number*
 
-.. |image1| image:: /_static/images/en-us_image_0289945877.png
-.. |image2| image:: /_static/images/en-us_image_0270653586.png
-.. |image3| image:: /_static/images/en-us_image_0270653585.png
+.. |image1| image:: /_static/images/en-us_image_0000001979891813.png
+.. |image2| image:: /_static/images/en-us_image_0000001979891941.png

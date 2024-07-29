@@ -27,7 +27,7 @@ Procedure
    The **Create VPC Endpoint** page is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001124393987.png
+   .. figure:: /_static/images/en-us_image_0000001980064445.png
       :alt: **Figure 1** Create VPC Endpoint
 
       **Figure 1** Create VPC Endpoint
@@ -41,33 +41,33 @@ Procedure
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter                         | Description                                                                                                                                          |
       +===================================+======================================================================================================================================================+
-      | Region                            | Specifies the region where the VPC endpoint is to be located.                                                                                        |
+      | Region                            | Specifies the region where the VPC endpoint is to be deployed.                                                                                       |
       |                                   |                                                                                                                                                      |
       |                                   | Resources in different regions cannot communicate with each other over an intranet. For lower latency and quicker access, select the nearest region. |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Service Category                  | There are two options:                                                                                                                               |
       |                                   |                                                                                                                                                      |
-      |                                   | -  **Cloud services**: Select this value if the target VPC endpoint service is a cloud service.                                                      |
-      |                                   | -  **Find a service by name**: Select this value if the target VPC endpoint service is a private service of your own.                                |
+      |                                   | -  **Cloud service**: Select this option if the VPC endpoint service to be accessed is a cloud service.                                              |
+      |                                   | -  **Find a service by name**: Select this option if the VPC endpoint service to be accessed is a private service of your own.                       |
       |                                   |                                                                                                                                                      |
-      |                                   | In this example, select **Cloud services**.                                                                                                          |
+      |                                   | In this example, select **Cloud service**.                                                                                                           |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Service List                      | This parameter is available only when you select **Cloud services** for **Service Category**.                                                        |
+      | Service List                      | This parameter is available only when you select **Cloud service** for **Service Category**.                                                         |
       |                                   |                                                                                                                                                      |
       |                                   | The VPC endpoint service has been created by the O&M personnel and you can directly use it.                                                          |
       |                                   |                                                                                                                                                      |
       |                                   | In this example, select **com.t-systems.otc.eu-de.dns**.                                                                                             |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Create a Private Domain Name      | If you want to access a VPC endpoint using a domain name, select **Create a Private Domain Name** when buying a VPC endpoint.                        |
+      | Create a Private Domain Name      | If you want to access a VPC endpoint using a domain name, select **Create a Private Domain Name**.                                                   |
       |                                   |                                                                                                                                                      |
-      |                                   | This parameter is only available for interface VPC endpoints, and its setting depends on the type of target VPC endpoint services.                   |
+      |                                   | This parameter is only available for interface VPC endpoints.                                                                                        |
       |                                   |                                                                                                                                                      |
       |                                   | -  For the gateway type, this parameter is unavailable.                                                                                              |
       |                                   | -  For the interface type, this parameter is optional.                                                                                               |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | VPC                               | Specifies the VPC where the VPC endpoint is to be deployed.                                                                                          |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Subnet                            | Specifies the subnet where the VPC endpoint is to be located.                                                                                        |
+      | Subnet                            | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                       |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Private IP Address                | This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                 |
       |                                   |                                                                                                                                                      |
@@ -98,8 +98,7 @@ Procedure
       |                                   | -  Can contain a maximum of 36 characters.                                           |
       |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
       +-----------------------------------+--------------------------------------------------------------------------------------+
-      | Tag value                         | -  Cannot be left blank.                                                             |
-      |                                   | -  Can contain a maximum of 43 characters.                                           |
+      | Tag value                         | -  Can contain a maximum of 43 characters.                                           |
       |                                   | -  Can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
       +-----------------------------------+--------------------------------------------------------------------------------------+
 
@@ -114,14 +113,14 @@ Procedure
 
    If the status of the VPC endpoint changes to **Accepted**, the VPC endpoint for connecting to **com.t-systems.otc.eu-de.dns** is created.
 
-8. In the VPC endpoint list, click the ID of the target VPC endpoint to view its details.
+8. In the VPC endpoint list, click the ID of the VPC endpoint to view its details.
 
    After a VPC endpoint for accessing interface VPC endpoint services is created, a private IP address is assigned together with a private domain name if you select **Create a Private Domain Name** during creation.
 
 
-   .. figure:: /_static/images/en-us_image_0289945784.png
+   .. figure:: /_static/images/en-us_image_0000001979891973.png
       :alt: **Figure 2** Summary of the VPC endpoint
 
       **Figure 2** Summary of the VPC endpoint
 
-.. |image1| image:: /_static/images/en-us_image_0289945877.png
+.. |image1| image:: /_static/images/en-us_image_0000001979891813.png
