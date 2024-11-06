@@ -9,7 +9,7 @@ APIs
 -  :ref:`APIs for Managing VPC Endpoint Services <vpcep_06_0200>`
 -  :ref:`APIs for Managing VPC Endpoints <vpcep_06_0300>`
 -  :ref:`Resource Quota <vpcep_06_0400>`
--  :ref:`Tag Function <vpcep_06_0500>`
+-  :ref:`Tags <vpcep_06_0500>`
 
 .. toctree::
    :maxdepth: 1
@@ -19,4 +19,4 @@ APIs
    apis_for_managing_vpc_endpoint_services/index
    apis_for_managing_vpc_endpoints/index
    resource_quota/index
-   tag_function/index
+   tags/index
