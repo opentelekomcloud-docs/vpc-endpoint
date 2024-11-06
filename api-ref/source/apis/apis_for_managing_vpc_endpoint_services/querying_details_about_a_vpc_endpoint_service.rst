@@ -94,8 +94,8 @@ Response
       |                       |                       |                                                                                                                                                                                                                                                                                   |
       |                       |                       | There are two types of VPC endpoint services: interface and gateway.                                                                                                                                                                                                              |
       |                       |                       |                                                                                                                                                                                                                                                                                   |
-      |                       |                       | -  Gateway: VPC endpoint services of this type are configured by operations people. You can use them directly without the need to create one by yourselves.                                                                                                                       |
-      |                       |                       | -  Interface: VPC endpoint services of this type include cloud services configured by operations people and private services created by yourselves. You cannot configure these cloud services, but can use them.                                                                  |
+      |                       |                       | -  Gateway: VPC endpoint services of this type are configured by O&M personnel. You can use them directly without the need to create one by yourselves.                                                                                                                           |
+      |                       |                       | -  Interface: VPC endpoint services of this type include cloud services configured by O&M personnel and private services created by yourselves. You cannot configure these cloud services, but can use them.                                                                      |
       |                       |                       |                                                                                                                                                                                                                                                                                   |
       |                       |                       | You can perform the operations in :ref:`Creating a VPC Endpoint <vpcep_06_0303>` to create VPC endpoints for accessing VPC endpoints of the gateway and interface types.                                                                                                          |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -202,6 +202,7 @@ Response
           "service_type":"interface",
           "server_type":"VM",
           "project_id":"6e9dfd51d1124e8d8498dce894923a0d",
+          "description": "",
           "created_at":"2018-01-30T07:42:01Z",
           "ports":
                     [

@@ -12,7 +12,7 @@ This API is used to query whitelist records of a VPC endpoint service.
 
 .. note::
 
-   Your domain ID is in the whitelist of your own VPC endpoint service by default.
+   Your account ID is in the whitelist of your own VPC endpoint service by default.
 
 .. _vpcep_06_0208__section13022395:
 
@@ -42,9 +42,9 @@ GET /v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions
    +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                                                                                  |
    +=================+=================+=================+==============================================================================================================================================================+
-   | permission      | No              | String          | Specifies the authorized domain ID. The format is the **iam:domain::**\ *domain_id*.                                                                         |
+   | permission      | No              | String          | Specifies the authorized account ID. The format is the **iam:domain::**\ *domain_id*.                                                                        |
    |                 |                 |                 |                                                                                                                                                              |
-   |                 |                 |                 | *domain_id* indicates the domain ID, for example, iam:domain::6e9dfd51d1124e8d8498dce894923a0d                                                               |
+   |                 |                 |                 | *domain_id* indicates the account ID, for example, iam:domain::6e9dfd51d1124e8d8498dce894923a0d                                                              |
    |                 |                 |                 |                                                                                                                                                              |
    |                 |                 |                 | Fuzzy search is supported.                                                                                                                                   |
    +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+

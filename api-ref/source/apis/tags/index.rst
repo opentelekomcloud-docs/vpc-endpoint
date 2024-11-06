@@ -2,8 +2,8 @@
 
 .. _vpcep_06_0500:
 
-Tag Function
-============
+Tags
+====
 
 -  :ref:`Querying Resources by Tag <vpcep_06_0501>`
 -  :ref:`Batch Adding Tags to or Deleting Tags from a Specified Resource <vpcep_06_0502>`

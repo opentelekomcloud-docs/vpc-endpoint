@@ -12,7 +12,7 @@ This API is used to batch add or delete whitelist records of a VPC endpoint serv
 
 .. note::
 
-   Your domain ID is in the whitelist of your own VPC endpoint service by default.
+   Your account ID is in the whitelist of your own VPC endpoint service by default.
 
 URI
 ---
@@ -51,7 +51,7 @@ Request
       |                 |                 |                  |                                                                                                                                                                                       |
       |                 |                 |                  | -  **iam:domain::** is fixed.                                                                                                                                                         |
       |                 |                 |                  |                                                                                                                                                                                       |
-      |                 |                 |                  | -  *domain_id* indicates the domain ID of the target user.                                                                                                                            |
+      |                 |                 |                  | -  *domain_id* indicates the account ID of the target user.                                                                                                                           |
       |                 |                 |                  |                                                                                                                                                                                       |
       |                 |                 |                  |    The value contains 1 to 64 characters, including letters, digits, and asterisks (``*``). If you enter an asterisk, this VPC endpoint service allows access from any VPC endpoints. |
       |                 |                 |                  |                                                                                                                                                                                       |
