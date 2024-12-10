@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'vpcep-umn.tex',
-     u'VPC Endpoint - User Guide',
+    u'VPC Endpoint - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
