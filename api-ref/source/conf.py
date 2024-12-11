@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'vpcep-api-ref.tex',
-     u'VPC Endpoint - API Reference',
+    u'VPC Endpoint - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
