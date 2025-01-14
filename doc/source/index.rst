@@ -8,6 +8,7 @@ The VPC Endpoint (VPCEP) service provides secure and private channels to connect
    :class: container-sbv
 
    .. service_card::
+      :environment: internal
       :service_type: vpcep 
       :umn: This document describes basic concepts, functions, key terms, and FAQs of the VPC Endpoint service and provides instructions for quickly creating VPC Endpoint groups and VPC Endpoint Services.
       :api-ref: This document describes application programming interfaces (APIs) of VPC Endpoint and provides API parameter description and example values.
