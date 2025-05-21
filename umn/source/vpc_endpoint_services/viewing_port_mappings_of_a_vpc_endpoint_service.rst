@@ -33,7 +33,7 @@ Procedure
    The port mappings configured for the VPC endpoint service are displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001979891909.png
+   .. figure:: /_static/images/en-us_image_0000002184495069.png
       :alt: **Figure 1** Port Mapping
 
       **Figure 1** Port Mapping
