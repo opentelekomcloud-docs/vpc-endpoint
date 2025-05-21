@@ -60,7 +60,7 @@ Add Account IDs to Be Authorized to the Whitelist of a VPC Endpoint Service
 6. Enter an authorized account ID in the required format and click **OK**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980011797.png
+   .. figure:: /_static/images/en-us_image_0000002184446549.png
       :alt: **Figure 3** Add to Whitelist
 
       **Figure 3** Add to Whitelist

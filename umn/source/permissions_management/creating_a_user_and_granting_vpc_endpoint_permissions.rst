@@ -5,7 +5,7 @@
 Creating a User and Granting VPC Endpoint Permissions
 =====================================================
 
-Use `IAM <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html>`__ to implement fine-grained permissions control over your VPC Endpoint resources. With IAM, you can:
+Use `IAM <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0026.html>`__ to implement fine-grained permissions control over your VPC Endpoint resources. With IAM, you can:
 
 -  Create IAM users for employees based on your enterprise's organizational structure. Each IAM user has their own security credentials for accessing VPC Endpoint resources.
 -  Grant only the permissions required for users to perform a specific task.
@@ -18,7 +18,7 @@ This section describes the process flow for granting permissions (see :ref:`Figu
 Prerequisites
 -------------
 
-You must learn about permissions (see :ref:`Permissions <vpcep_pd_0001>`) supported by VPC Endpoint and choose policies or roles according to your requirements. To grant permissions for other services, learn about all `Permissions <https://docs.otc.t-systems.com/additional/permissions.html>`__ supported by IAM.
+You must learn about permissions (see :ref:`Permissions <vpcep_pd_0001>`) supported by VPC Endpoint and choose policies or roles according to your requirements. To grant permissions for other services, learn about all `Permissions <https://docs.otc.t-systems.com/permissions/index.html>`__ supported by IAM.
 
 Process Flow
 ------------
@@ -32,15 +32,15 @@ Process Flow
 
 #. .. _vpcep_ug_0003__en-us_topic_0173481716_en-us_topic_0172268189_li10269636890:
 
-   `Create a user group and assign it permissions <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/creating_a_user_group_and_assigning_permissions.html>`__.
+   `Create a user group and assign it permissions <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0030.html>`__.
 
    On the IAM console, create a user group and attach the **VPCEndpoint Administrator** policy to the group.
 
-#. `Create an IAM user and add it to the created user group <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/creating_a_user_and_adding_the_user_to_a_user_group.html>`__.
+#. `Create an IAM user and add it to the created user group <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0031.html>`__.
 
    Create an IAM user and add it to the user group created in :ref:`1 <vpcep_ug_0003__en-us_topic_0173481716_en-us_topic_0172268189_li10269636890>`.
 
-#. `Log in as the IAM user <https://docs.otc.t-systems.com/identity-access-management/umn/getting_started/logging_in_as_a_user.html>`__ and verify permissions.
+#. `Log in as the IAM user <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0032.html>`__ and verify permissions.
 
    In the authorized region, perform the following operations:
 

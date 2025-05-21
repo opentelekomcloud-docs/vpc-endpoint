@@ -32,7 +32,7 @@ Procedure
 6. Select the **Connection Management** tab.
 
 
-   .. figure:: /_static/images/en-us_image_0000001979891897.png
+   .. figure:: /_static/images/en-us_image_0000002183865529.png
       :alt: **Figure 1** Connection Management
 
       **Figure 1** Connection Management

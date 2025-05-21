@@ -27,7 +27,7 @@ Procedure
    The **Create VPC Endpoint** page is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980064445.png
+   .. figure:: /_static/images/en-us_image_0000002185000233.png
       :alt: **Figure 1** Create VPC Endpoint
 
       **Figure 1** Create VPC Endpoint
@@ -67,11 +67,26 @@ Procedure
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | VPC                               | Specifies the VPC where the VPC endpoint is to be deployed.                                                                                          |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Subnet                            | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                       |
-      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Private IP Address                | This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                 |
+      | Subnet                            | This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                 |
       |                                   |                                                                                                                                                      |
-      |                                   | Specifies the private IP address of the VPC endpoint. You can select **Automatically assign** or **Manually specify**.                               |
+      |                                   | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                       |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | IPv4 Address                      | This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                 |
+      |                                   |                                                                                                                                                      |
+      |                                   | Specifies the IPv4 address of the VPC endpoint.                                                                                                      |
+      |                                   |                                                                                                                                                      |
+      |                                   | You can select **Automatically assign** or **Manually specify**.                                                                                     |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Access Control                    | This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service.                                 |
+      |                                   |                                                                                                                                                      |
+      |                                   | It controls IP addresses and CIDR blocks that are allowed to access the VPC endpoint.                                                                |
+      |                                   |                                                                                                                                                      |
+      |                                   | -  If **Access Control** is enabled, only IP addresses or CIDR blocks in the whitelist are allowed to access the VPC endpoint.                       |
+      |                                   | -  If **Access Control** is disabled, any IP address or CIDR block can access the VPC endpoint.                                                      |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Whitelist                         | This parameter is available only when you create a VPC endpoint for connecting to an interface VPC endpoint service and enable access control.       |
+      |                                   |                                                                                                                                                      |
+      |                                   | Lists the IP addresses or CIDR blocks that are allowed to access the VPC endpoint. You can add a maximum of 20 records.                              |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Tag                               | This parameter is optional.                                                                                                                          |
       |                                   |                                                                                                                                                      |
@@ -84,6 +99,8 @@ Procedure
       |                                   |    If a predefined tag has been created on TMS, you can directly select the corresponding tag key and value.                                         |
       |                                   |                                                                                                                                                      |
       |                                   |    For details about predefined tags, see `Predefined Tag Overview <https://docs.otc.t-systems.com/usermanual/tms/en-us_topic_0056266269.html>`__.   |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Provides supplementary information about the VPC endpoint.                                                                                           |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_02_0302__table775312110110:
@@ -107,7 +124,7 @@ Procedure
    Confirm the specifications and click **Create Now**.
 
    -  If all of the specifications are correct, click **Submit**.
-   -  If any of the specifications are incorrect, click **Previous** to return to the previous page and modify the parameters as needed, and click **Submit**.
+   -  If any of the specifications are incorrect, click **Previous** to return to the previous page, modify the parameters as needed, and click **Submit**.
 
 7. Click **Back to VPC Endpoint List** after the task is submitted.
 
@@ -118,7 +135,7 @@ Procedure
    After a VPC endpoint for accessing interface VPC endpoint services is created, a private IP address is assigned together with a private domain name if you select **Create a Private Domain Name** during creation.
 
 
-   .. figure:: /_static/images/en-us_image_0000001979891973.png
+   .. figure:: /_static/images/en-us_image_0000002184964665.png
       :alt: **Figure 2** Summary of the VPC endpoint
 
       **Figure 2** Summary of the VPC endpoint

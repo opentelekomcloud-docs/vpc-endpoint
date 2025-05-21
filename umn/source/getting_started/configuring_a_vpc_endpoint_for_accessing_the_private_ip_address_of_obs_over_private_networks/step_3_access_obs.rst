@@ -31,7 +31,7 @@ Procedure
    In the VPC endpoint list, locate the VPC endpoint and click the ID of the endpoint to view its details.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980011629.png
+   .. figure:: /_static/images/en-us_image_0000002149659408.png
       :alt: **Figure 1** Summary of the VPC endpoint
 
       **Figure 1** Summary of the VPC endpoint

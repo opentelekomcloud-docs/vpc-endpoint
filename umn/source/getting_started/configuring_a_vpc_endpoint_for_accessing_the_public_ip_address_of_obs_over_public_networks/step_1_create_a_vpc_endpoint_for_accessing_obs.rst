@@ -28,7 +28,7 @@ Procedure
 
    .. _vpcep_02_0402__en-us_topic_0289945787_fig1672316225376:
 
-   .. figure:: /_static/images/en-us_image_0000001980082033.png
+   .. figure:: /_static/images/en-us_image_0000002185218293.png
       :alt: **Figure 1** Create VPC Endpoint
 
       **Figure 1** Create VPC Endpoint
@@ -61,8 +61,6 @@ Procedure
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | VPC                               | Specifies the VPC where the VPC endpoint is to be deployed.                                                                                          |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Subnet                            | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                       |
-      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Route Table                       | This parameter is available only when you create a VPC endpoint for connecting to a gateway VPC endpoint service.                                    |
       |                                   |                                                                                                                                                      |
       |                                   | Select a route table for the VPC where the VPC endpoint is to be deployed.                                                                           |
@@ -76,6 +74,8 @@ Procedure
       |                                   |    If a predefined tag has been created on TMS, you can directly select the corresponding tag key and value.                                         |
       |                                   |                                                                                                                                                      |
       |                                   |    For details about predefined tags, see `Predefined Tag Overview <https://docs.otc.t-systems.com/usermanual/tms/en-us_topic_0056266269.html>`__.   |
+      +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Provides supplementary information about the VPC endpoint.                                                                                           |
       +-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_02_0402__en-us_topic_0289945787_table1487920102215:
@@ -99,7 +99,7 @@ Procedure
    Confirm the specifications and click **Create Now**.
 
    -  If all of the specifications are correct, click **Submit**.
-   -  If any of the specifications are incorrect, click **Previous** to return to the previous page and modify the parameters as needed, and click **Submit**.
+   -  If any of the specifications are incorrect, click **Previous** to return to the previous page, modify the parameters as needed, and click **Submit**.
 
 7. Click **Back to VPC Endpoint List** after the task is submitted.
 
@@ -108,7 +108,7 @@ Procedure
 8. In the VPC endpoint list, click the ID of the VPC endpoint to view its details.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980011849.png
+   .. figure:: /_static/images/en-us_image_0000002185096105.png
       :alt: **Figure 2** Summary of the VPC endpoint
 
       **Figure 2** Summary of the VPC endpoint
