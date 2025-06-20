@@ -93,7 +93,7 @@ You can delete tags added to a VPC endpoint. Deleted tags cannot be restored. Ex
 5. On the displayed page, select the **Tags** tab.
 
 6. In the tag list, locate the tag and click **Delete** in the **Operation** column.
-7. Click **Yes**.
+7. In the displayed dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001979891813.png
 .. |image2| image:: /_static/images/en-us_image_0000001979891813.png

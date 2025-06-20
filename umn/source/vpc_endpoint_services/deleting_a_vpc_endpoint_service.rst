@@ -36,13 +36,13 @@ Procedure
 5. In the VPC endpoint service list, locate the VPC endpoint service and click **Delete** in the **Operation** column.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980011825.png
+   .. figure:: /_static/images/en-us_image_0000002183863757.png
       :alt: **Figure 1** Delete VPC Endpoint Service
 
       **Figure 1** Delete VPC Endpoint Service
 
-6. .. _vpcep_03_0103__li469158122912:
+6. .. _vpcep_03_0103__li1991835110:
 
-   In the **Delete VPC Endpoint Service** dialog box, click **Yes**.
+   In the **Delete This VPC Endpoint Service** dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001979891813.png

@@ -49,7 +49,7 @@ Procedure
    The **Create VPC Endpoint Service** page is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001979891805.png
+   .. figure:: /_static/images/en-us_image_0000002183621541.png
       :alt: **Figure 1** Create VPC Endpoint Service
 
       **Figure 1** Create VPC Endpoint Service
@@ -119,9 +119,9 @@ Procedure
       |                                   |                                                                                                                                                                                                                                                                                                                                                         |
       |                                   |    If an elastic load balancer is used as the backend resource, the source IP address received by the VPC endpoint service is not the real address of the client.                                                                                                                                                                                       |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | ECS List                          | When you select **ECS** for **Backend Resource Type**, select an ECS from the ECS list.                                                                                                                                                                                                                                                                 |
+      | ECS List                          | This parameter is available when you select **ECS** for **Backend Resource Type**. Select an ECS from the ECS list.                                                                                                                                                                                                                                     |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | BMS List                          | When you select **BMS** for **Backend Resource Type**, select a BMS from the BMS list.                                                                                                                                                                                                                                                                  |
+      | BMS List                          | This parameter is available when you select **BMS** for **Backend Resource Type**. Select a BMS from the BMS list.                                                                                                                                                                                                                                      |
       |                                   |                                                                                                                                                                                                                                                                                                                                                         |
       |                                   | .. note::                                                                                                                                                                                                                                                                                                                                               |
       |                                   |                                                                                                                                                                                                                                                                                                                                                         |
@@ -138,6 +138,8 @@ Procedure
       |                                   |    If a predefined tag has been created on TMS, you can directly select the corresponding tag key and value.                                                                                                                                                                                                                                            |
       |                                   |                                                                                                                                                                                                                                                                                                                                                         |
       |                                   |    For details about predefined tags, see `Predefined Tag Overview <https://docs.otc.t-systems.com/usermanual/tms/en-us_topic_0056266269.html>`__.                                                                                                                                                                                                      |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Provides supplementary information about the VPC endpoint service.                                                                                                                                                                                                                                                                                      |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0131645182__en-us_topic_0132331143_table539113432713:
@@ -163,7 +165,7 @@ Procedure
    Click **Back to VPC Endpoint Service List** to view the newly-created VPC endpoint service.
 
 
-   .. figure:: /_static/images/en-us_image_0000001949612240.jpg
+   .. figure:: /_static/images/en-us_image_0000002183560857.png
       :alt: **Figure 2** VPC endpoint service list
 
       **Figure 2** VPC endpoint service list

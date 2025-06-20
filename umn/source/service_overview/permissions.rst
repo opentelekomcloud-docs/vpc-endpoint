@@ -13,7 +13,7 @@ If your account does not require individual IAM users for permissions management
 
 IAM is a free service. You only pay for the resources in your account.
 
-For more information about IAM, see `IAM Service Overview <https://docs.otc.t-systems.com/identity-access-management/umn/service_overview/what_is_iam.html>`__.
+For more information about IAM, see `IAM Service Overview <https://docs.otc.t-systems.com/usermanual/iam/iam_01_0026.html>`__.
 
 VPC Endpoint Permissions
 ------------------------

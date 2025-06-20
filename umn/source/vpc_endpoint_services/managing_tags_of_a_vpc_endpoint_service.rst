@@ -98,7 +98,7 @@ Perform the following operations to delete a tag of a VPC endpoint service:
 5. In the VPC endpoint service list, locate the VPC endpoint service and click its name.
 6. On the displayed page, select the **Tags** tab.
 7. In the tag list, locate the tag and click **Delete** in the **Operation** column.
-8. Click **Yes**.
+8. In the displayed dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001979891813.png
 .. |image2| image:: /_static/images/en-us_image_0000001979891813.png

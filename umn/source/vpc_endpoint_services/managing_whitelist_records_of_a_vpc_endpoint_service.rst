@@ -35,7 +35,7 @@ Add a Whitelist Record
 7. Enter an authorized account ID in the required format and click **OK**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980011797.png
+   .. figure:: /_static/images/en-us_image_0000002184446549.png
       :alt: **Figure 1** Add to Whitelist
 
       **Figure 1** Add to Whitelist
@@ -66,7 +66,7 @@ Delete a Whitelist Record
 
    To delete multiple whitelist records, select the account IDs to be deleted and click **Delete** in the upper left corner.
 
-7. Click **Yes**.
+7. In the displayed dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001979891813.png
 .. |image2| image:: /_static/images/en-us_image_0000001979891813.png
