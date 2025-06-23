@@ -28,11 +28,11 @@ Procedure
 #. In the VPC endpoint list, locate the VPC endpoint and click **Delete** in the **Operation** column.
 
 
-   .. figure:: /_static/images/en-us_image_0000001980011661.png
+   .. figure:: /_static/images/en-us_image_0000002149328946.png
       :alt: **Figure 1** Delete VPC Endpoint
 
       **Figure 1** Delete VPC Endpoint
 
-#. In the **Delete VPC Endpoint** dialog box, click **Yes**.
+#. In the **Delete VPC Endpoint** dialog box, click **OK**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001979891813.png

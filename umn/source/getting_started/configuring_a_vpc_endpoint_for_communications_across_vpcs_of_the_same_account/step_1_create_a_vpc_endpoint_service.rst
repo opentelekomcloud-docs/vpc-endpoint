@@ -29,7 +29,7 @@ Procedure
    The **Create VPC Endpoint Service** page is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001979891805.png
+   .. figure:: /_static/images/en-us_image_0000002183621541.png
       :alt: **Figure 1** Create VPC Endpoint Service
 
       **Figure 1** Create VPC Endpoint Service
@@ -111,6 +111,8 @@ Procedure
       |                                   |                                                                                                                                                                                                                                                                                                                                                         |
       |                                   |    For details about predefined tags, see `Predefined Tag Overview <https://docs.otc.t-systems.com/usermanual/tms/en-us_topic_0056266269.html>`__.                                                                                                                                                                                                      |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Provides supplementary information about the VPC endpoint service.                                                                                                                                                                                                                                                                                      |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_02_02022__table539113432713:
 
@@ -137,7 +139,7 @@ Procedure
    In the VPC endpoint service list, locate the VPC endpoint service and click its name to view its details.
 
 
-   .. figure:: /_static/images/en-us_image_0000001949612440.png
+   .. figure:: /_static/images/en-us_image_0000002148325420.png
       :alt: **Figure 2** Summary of the VPC endpoint service
 
       **Figure 2** Summary of the VPC endpoint service

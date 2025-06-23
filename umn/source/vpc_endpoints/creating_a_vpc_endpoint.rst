@@ -39,14 +39,14 @@ Creating a VPC Endpoint for Accessing Interface VPC Endpoint Services
 
    .. _en-us_topic_0131645189__fig1647103210203:
 
-   .. figure:: /_static/images/en-us_image_0000001980053681.png
+   .. figure:: /_static/images/en-us_image_0000002184506357.png
       :alt: **Figure 1** Create VPC Endpoint (**Service Category** set to **Cloud service**)
 
       **Figure 1** Create VPC Endpoint (**Service Category** set to **Cloud service**)
 
    .. _en-us_topic_0131645189__fig373917386366:
 
-   .. figure:: /_static/images/en-us_image_0000001964944912.png
+   .. figure:: /_static/images/en-us_image_0000002184469493.png
       :alt: **Figure 2** Create VPC Endpoint (**Service Category** set to **Find a service by name**)
 
       **Figure 2** Create VPC Endpoint (**Service Category** set to **Find a service by name**)
@@ -87,9 +87,22 @@ Creating a VPC Endpoint for Accessing Interface VPC Endpoint Services
       |                                   |                                                                                                                                                                                                                     |
       |                                   | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                                                                                      |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Private IP Address                | This parameter is available when you want to access an interface VPC endpoint service.                                                                                                                              |
+      | IPv4 Address                      | This parameter is available when you want to access an interface VPC endpoint service.                                                                                                                              |
       |                                   |                                                                                                                                                                                                                     |
-      |                                   | Specifies the private IP address of the VPC endpoint. You can select **Automatically assign** or **Manually specify**.                                                                                              |
+      |                                   | Specifies the IPv4 address of the VPC endpoint.                                                                                                                                                                     |
+      |                                   |                                                                                                                                                                                                                     |
+      |                                   | You can select **Automatically assign** or **Manually specify**.                                                                                                                                                    |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Access Control                    | This parameter is available when you want to access an interface VPC endpoint service.                                                                                                                              |
+      |                                   |                                                                                                                                                                                                                     |
+      |                                   | It controls IP addresses and CIDR blocks that are allowed to access the VPC endpoint.                                                                                                                               |
+      |                                   |                                                                                                                                                                                                                     |
+      |                                   | -  If **Access Control** is enabled, only IP addresses or CIDR blocks in the whitelist are allowed to access the VPC endpoint.                                                                                      |
+      |                                   | -  If **Access Control** is disabled, any IP address or CIDR block can access the VPC endpoint.                                                                                                                     |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Whitelist                         | This parameter is available when you want to access an interface endpoint service and **Access Control** is enabled.                                                                                                |
+      |                                   |                                                                                                                                                                                                                     |
+      |                                   | Lists the IP addresses or CIDR blocks that are allowed to access the VPC endpoint. You can add a maximum of 20 records.                                                                                             |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Tag                               | This parameter is optional.                                                                                                                                                                                         |
       |                                   |                                                                                                                                                                                                                     |
@@ -102,6 +115,8 @@ Creating a VPC Endpoint for Accessing Interface VPC Endpoint Services
       |                                   |    If a predefined tag has been created on TMS, you can directly select the corresponding tag key and value.                                                                                                        |
       |                                   |                                                                                                                                                                                                                     |
       |                                   |    For details about predefined tags, see `Predefined Tag Overview <https://docs.otc.t-systems.com/usermanual/tms/en-us_topic_0056266269.html>`__.                                                                  |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Provides supplementary information about the VPC endpoint.                                                                                                                                                          |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0131645189__table37259471306:
@@ -125,7 +140,7 @@ Creating a VPC Endpoint for Accessing Interface VPC Endpoint Services
    Confirm the specifications and click **Create Now**.
 
    -  If all of the specifications are correct, click **Submit**.
-   -  If any of the specifications are incorrect, click **Previous** to return to the previous page and modify the parameters as needed, and click **Submit**.
+   -  If any of the specifications are incorrect, click **Previous** to return to the previous page, modify the parameters as needed, and click **Submit**.
 
 .. _en-us_topic_0131645189__section3281125041216:
 
@@ -143,13 +158,13 @@ Creating a VPC Endpoint for Accessing Gateway VPC Endpoint Services
 #. On the **Create VPC Endpoint** page, configure the parameters.
 
 
-   .. figure:: /_static/images/en-us_image_0000001949701506.png
+   .. figure:: /_static/images/en-us_image_0000002149218350.png
       :alt: **Figure 3** Create VPC Endpoint (**Service Category** set to **Cloud service**)
 
       **Figure 3** Create VPC Endpoint (**Service Category** set to **Cloud service**)
 
 
-   .. figure:: /_static/images/en-us_image_0000001963030200.png
+   .. figure:: /_static/images/en-us_image_0000002149376822.png
       :alt: **Figure 4** Create VPC Endpoint (**Service Category** set to **Find a service by name**)
 
       **Figure 4** Create VPC Endpoint (**Service Category** set to **Find a service by name**)
@@ -183,8 +198,6 @@ Creating a VPC Endpoint for Accessing Gateway VPC Endpoint Services
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | VPC                               | Specifies the VPC where the VPC endpoint is to be deployed.                                                                                                                                                         |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Subnet                            | Specifies the subnet where the VPC endpoint is to be deployed.                                                                                                                                                      |
-      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Route Table                       | This parameter is available only when you create a VPC endpoint for connecting to a gateway VPC endpoint service.                                                                                                   |
       |                                   |                                                                                                                                                                                                                     |
       |                                   | Select a route table for the VPC where the VPC endpoint is to be deployed.                                                                                                                                          |
@@ -200,6 +213,8 @@ Creating a VPC Endpoint for Accessing Gateway VPC Endpoint Services
       |                                   |    If a predefined tag has been created on TMS, you can directly select the corresponding tag key and value.                                                                                                        |
       |                                   |                                                                                                                                                                                                                     |
       |                                   |    For details about predefined tags, see `Predefined Tag Overview <https://docs.otc.t-systems.com/usermanual/tms/en-us_topic_0056266269.html>`__.                                                                  |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Provides supplementary information about the VPC endpoint.                                                                                                                                                          |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _en-us_topic_0131645189__table62892050161211:
@@ -221,7 +236,7 @@ Creating a VPC Endpoint for Accessing Gateway VPC Endpoint Services
 #. Confirm the specifications and click **Create Now**.
 
    -  If all of the specifications are correct, click **Submit**.
-   -  If any of the specifications are incorrect, click **Previous** to return to the previous page and modify the parameters as needed, and click **Submit**.
+   -  If any of the specifications are incorrect, click **Previous** to return to the previous page, modify the parameters as needed, and click **Submit**.
 
 .. |image1| image:: /_static/images/en-us_image_0000001979891813.png
 .. |image2| image:: /_static/images/en-us_image_0000001979891813.png

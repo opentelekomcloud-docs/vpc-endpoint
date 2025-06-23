@@ -9,6 +9,7 @@ VPC Endpoints
 -  :ref:`Creating a VPC Endpoint <en-us_topic_0131645189>`
 -  :ref:`Querying and Accessing a VPC Endpoint <vpcep_03_0202>`
 -  :ref:`Deleting a VPC Endpoint <vpcep_03_0203>`
+-  :ref:`Configuring Access Control for a VPC Endpoint <vpcep_03_0205>`
 -  :ref:`Managing Tags of a VPC Endpoint <vpcep_03_0206>`
 
 .. toctree::
@@ -19,4 +20,5 @@ VPC Endpoints
    creating_a_vpc_endpoint
    querying_and_accessing_a_vpc_endpoint
    deleting_a_vpc_endpoint
+   configuring_access_control_for_a_vpc_endpoint
    managing_tags_of_a_vpc_endpoint
