@@ -44,7 +44,7 @@ GET /v1/{project_id}/vpc-endpoint-services/{vpc_endpoint_service_id}/permissions
    +=================+=================+=================+==============================================================================================================================================================+
    | permission      | No              | String          | Specifies the authorized account ID. The format is the **iam:domain::**\ *domain_id*.                                                                        |
    |                 |                 |                 |                                                                                                                                                              |
-   |                 |                 |                 | *domain_id* indicates the account ID, for example, iam:domain::6e9dfd51d1124e8d8498dce894923a0d                                                              |
+   |                 |                 |                 | *domain_id* indicates the account ID, for example, iam:domain::6e9dfd51d1124e8d8498dce894923a0d.                                                             |
    |                 |                 |                 |                                                                                                                                                              |
    |                 |                 |                 | Fuzzy search is supported.                                                                                                                                   |
    +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -113,6 +113,10 @@ Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | description           | String                | Specifies the description of a whitelist record of a VPC endpoint service. The description can contain a maximum of 128 characters and cannot contain left angle brackets (<) or right angle brackets (>).                          |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | permission_type       | String                | Specifies the whitelist type of the VPC endpoint service.                                                                                                                                                                           |
+      |                       |                       |                                                                                                                                                                                                                                     |
+      |                       |                       | Only **domainId** is supported, which indicates the whitelisted IDs of accounts that can create VPC endpoints to connect to the VPC endpoint service.                                                                               |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | created_at            | String                | Specifies when the whitelist record is added.                                                                                                                                                                                       |
       |                       |                       |                                                                                                                                                                                                                                     |
       |                       |                       | The UTC time format is used: YYYY-MM-DDTHH:MM:SSZ.                                                                                                                                                                                  |
@@ -129,6 +133,7 @@ Response
                       "id":"f2659906-c622-480a-83e9-ef42bdb67b90",
                       "permission":"*",
                       "description":"demo",
+                      "permission_type": "domainId",
                       "created_at":"2018-10-18T13:26:40Z"
                   }
           ],
