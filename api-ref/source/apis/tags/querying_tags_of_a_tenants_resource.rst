@@ -92,3 +92,8 @@ Status Codes
 ------------
 
 See :ref:`Status Codes <vpcep_08_0001>`.
+
+Error Codes
+-----------
+
+For details, see :ref:`Error Codes <vpcep_08_0002>`.
