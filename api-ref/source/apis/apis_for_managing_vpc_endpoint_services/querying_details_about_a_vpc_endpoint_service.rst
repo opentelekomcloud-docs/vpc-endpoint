@@ -65,7 +65,7 @@ Response
       |                       |                       | -  If the backend resource is a virtual IP address, the value is the port ID of the physical server where virtual resources are created. (This value will be discarded. The LB type is recommended.)                                                                              |
       |                       |                       | -  If the backend resource is a BMS, the value is the NIC ID of the BMS where the VPC endpoint service is deployed. (This value will be discarded. The LB type is recommended.)                                                                                                   |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | pool_id               | String                | Specifies the ID of the cluster associated with the target VPCEP resource.                                                                                                                                                                                                        |
+      | pool_id               | String                | Specifies the ID of the cluster associated with the target VPC endpoint resource.                                                                                                                                                                                                 |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | service_name          | String                | Specifies the name of the VPC endpoint service.                                                                                                                                                                                                                                   |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -135,13 +135,44 @@ Response
       |                       |                       |                                                                                                                                                                                                                                                                                   |
       |                       |                       | The default value is **close**.                                                                                                                                                                                                                                                   |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | payer                 | String                | Specifies the payer of the VPC endpoint service, that is, who pays for the connected VPC endpoints. This is a reserved parameter and is not supported currently.                                                                                                                  |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | -  **endpoint**: paid by the tenant who creates the VPC endpoints                                                                                                                                                                                                                 |
+      |                       |                       | -  **endpoint_service**: paid by the tenant who creates the VPC endpoint service                                                                                                                                                                                                  |
+      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | enable_policy         | Boolean               | Specifies whether the VPC endpoint policy can be customized.                                                                                                                                                                                                                      |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | -  **false**: The VPC endpoint policy cannot be customized.                                                                                                                                                                                                                       |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | -  **true**: The VPC endpoint policy can be customized.                                                                                                                                                                                                                           |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | The default value is **false**.                                                                                                                                                                                                                                                   |
+      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | ip_version            | String                | Specifies the IP version of the VPC endpoint service. Only professional VPC endpoint services support this parameter. This is a reserved parameter and is not supported currently.                                                                                                |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | -  **ipv4**: IPv4                                                                                                                                                                                                                                                                 |
+      |                       |                       | -  **ipv6**: IPv6                                                                                                                                                                                                                                                                 |
+      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | enterprise_project_id | String                | Specifies the enterprise project ID. When creating a VPC endpoint service, you need to specify an enterprise project ID for it.                                                                                                                                                   |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | The value is **0** or a string that contains a maximum of 36 bytes in the UUID format with hyphens (-).                                                                                                                                                                           |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | **0** indicates the default enterprise project.                                                                                                                                                                                                                                   |
+      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | supported_editions    | Array of strings      | Specifies the type of the VPC endpoint service. This is a reserved parameter and is not supported currently.                                                                                                                                                                      |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | The value can be:                                                                                                                                                                                                                                                                 |
+      |                       |                       |                                                                                                                                                                                                                                                                                   |
+      |                       |                       | -  **profession**: professional VPC endpoint services                                                                                                                                                                                                                             |
+      |                       |                       | -  **basic**: basic VPC endpoint services                                                                                                                                                                                                                                         |
+      +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | tags                  | Array of objects      | Lists the resource tags. For details, see :ref:`Table 4 <vpcep_06_0202__table489217571060>`.                                                                                                                                                                                      |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | error                 | Array of objects      | Specifies the error message.                                                                                                                                                                                                                                                      |
       |                       |                       |                                                                                                                                                                                                                                                                                   |
       |                       |                       | This field is returned when the status of the VPC endpoint service changes to **failed**. For details, see :ref:`Table 5 <vpcep_06_0202__table8651145512302>`.                                                                                                                    |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | description           | String                | Supplementary information about the VPC endpoint service.                                                                                                                                                                                                                         |
+      | description           | String                | Supplementary information about the VPC endpoint service. The value can contain a maximum of 128 characters, including letters and digits. Angle brackets (< and >) are not allowed.                                                                                              |
       +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_06_0202__table22278337:
@@ -168,13 +199,27 @@ Response
 
    .. table:: **Table 4** Tags parameters
 
-      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter | Type   | Description                                                                                                                                                                                      |
-      +===========+========+==================================================================================================================================================================================================+
-      | key       | String | Specifies the tag key. A tag key contains a maximum of 36 Unicode characters. **key** cannot be left blank. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
-      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value     | String | Specifies the tag value. A tag value contains a maximum of 43 Unicode characters and can be left blank. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@).     |
-      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Type                  | Description                                                                                                                                              |
+      +=======================+=======================+==========================================================================================================================================================+
+      | key                   | String                | Specifies the tag key. The key:                                                                                                                          |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Cannot be an empty string.                                                                                                                            |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Must be unique for each resource.                                                                                                                     |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can contain a maximum of 128 characters.                                                                                                              |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Cannot start or end with a space, or start with **\_sys\_**. Only letters, digits, spaces, and the following special characters are allowed: \_.:=+-@ |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | value                 | String                | Specifies the tag value. The value:                                                                                                                      |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can be an empty string.                                                                                                                               |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can contain a maximum of 255 characters.                                                                                                              |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can contain letters, digits, spaces, and the following special characters: ``_.:/=+-@``                                                               |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_06_0202__table8651145512302:
 
@@ -187,39 +232,48 @@ Response
       error_message String Specifies the error message.
       ============= ====== ============================
 
--  Example response
+-  Response example
 
    .. code-block::
 
       {
-          "id":"4189d3c2-8882-4871-a3c2-d380272eed83",
-          "port_id":"4189d3c2-8882-4871-a3c2-d380272eed88",
-          "vpc_id":"4189d3c2-8882-4871-a3c2-d380272eed80",
-          "pool_id":"5289d3c2-8882-4871-a3c2-d380272eed80",
-          "status":"available",
-          "approval_enabled":false,
-          "service_name":"test123",
-          "service_type":"interface",
-          "server_type":"VM",
-          "project_id":"6e9dfd51d1124e8d8498dce894923a0d",
-          "description": "",
-          "created_at":"2018-01-30T07:42:01Z",
-          "ports":
-                    [
-                      {
-                          "client_port":8080,
-                          "server_port":90,
-                          "protocol":"TCP"
-                      },
-                      {
-                          "client_port":8081,
-                          "server_port":80,
-                          "protocol":"TCP"
-                      }
-                    ]
+        "id" : "4189d3c2-8882-4871-a3c2-d380272eed83",
+        "port_id" : "4189d3c2-8882-4871-a3c2-d380272eed88",
+        "vpc_id" : "4189d3c2-8882-4871-a3c2-d380272eed80",
+        "pool_id" : "5289d3c2-8882-4871-a3c2-d380272eed80",
+        "status" : "available",
+        "approval_enabled" : false,
+        "service_name" : "test123",
+        "server_type" : "VM",
+        "service_type" : "interface",
+        "ports" : [ {
+          "client_port" : "8080",
+          "server_port" : "80",
+          "protocol" : "TCP"
+        }, {
+          "client_port" : "8081",
+          "server_port" : "80",
+          "protocol" : "TCP"
+        } ],
+        "tags": [],
+        "description": "",
+        "project_id" : "6e9dfd51d1124e8d8498dce894923a0d",
+        "supported_editions" : [ "basic", "profession" ],
+        "created_at" : "2022-04-14T09:35:47Z",
+        "updated_at" : "2022-04-14T09:36:47Z",
+        "tcp_proxy": "close",
+        "payer": "endpoint_service",
+        "enterprise_project_id": "0",
+        "ip_version": "ipv4",
+        "enable_policy": false
       }
 
 Status Codes
 ------------
 
 See :ref:`Status Codes <vpcep_08_0001>`.
+
+Error Codes
+-----------
+
+For details, see :ref:`Error Codes <vpcep_08_0002>`.

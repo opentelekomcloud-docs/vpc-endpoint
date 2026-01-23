@@ -180,7 +180,28 @@ Response
       |                       |                                                                            |        "Effect": "Allow"                                                                                                                                                                                     |
       |                       |                                                                            |    }                                                                                                                                                                                                         |
       +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | description           | String                                                                     | Specifies the description of the VPC endpoint.                                                                                                                                                               |
+      | public_border_group   | String                                                                     | Specifies the public border group information about the pool of the VPC endpoint.                                                                                                                            |
+      +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | ip_version            | String                                                                     | Specifies the IP version of the VPC endpoint. Only professional VPC endpoints support this parameter. This is a reserved parameter and is not supported currently.                                           |
+      |                       |                                                                            |                                                                                                                                                                                                              |
+      |                       |                                                                            | -  **ipv4**: IPv4                                                                                                                                                                                            |
+      |                       |                                                                            |                                                                                                                                                                                                              |
+      |                       |                                                                            | -  **ipv6**: IPv6                                                                                                                                                                                            |
+      +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | enterprise_project_id | String                                                                     | Specifies the enterprise project ID. When creating a VPC endpoint, you need to specify an enterprise project ID for it.                                                                                      |
+      |                       |                                                                            |                                                                                                                                                                                                              |
+      |                       |                                                                            | The value is **0** or a string that contains a maximum of 36 bytes in the UUID format with hyphens (-). **0** indicates the default enterprise project.                                                      |
+      +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | edition               | String                                                                     | Specifies the VPC endpoint type. This is a reserved parameter and is not supported currently.                                                                                                                |
+      |                       |                                                                            |                                                                                                                                                                                                              |
+      |                       |                                                                            | This parameter is available only when you create a VPC endpoint for accessing an interface VPC endpoint service.                                                                                             |
+      |                       |                                                                            |                                                                                                                                                                                                              |
+      |                       |                                                                            | The value can be:                                                                                                                                                                                            |
+      |                       |                                                                            |                                                                                                                                                                                                              |
+      |                       |                                                                            | -  **profession**: professional VPC endpoints                                                                                                                                                                |
+      |                       |                                                                            | -  **basic**: basic VPC endpoints                                                                                                                                                                            |
+      +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | description           | String                                                                     | Specifies the description of the VPC endpoint. The value can contain a maximum of 128 characters, including letters and digits. Angle brackets (< and >) are not allowed.                                    |
       +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | specification_name    | String                                                                     | Specifies the name of the VPC endpoint specifications.                                                                                                                                                       |
       +-----------------------+----------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -196,13 +217,27 @@ Response
 
    .. table:: **Table 3** Tags parameters
 
-      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter | Type   | Description                                                                                                                                                                                      |
-      +===========+========+==================================================================================================================================================================================================+
-      | key       | String | Specifies the tag key. A tag key contains a maximum of 36 Unicode characters. **key** cannot be left blank. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@). |
-      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | value     | String | Specifies the tag value. A tag value contains a maximum of 43 Unicode characters and can be left blank. It can contain only digits, letters, hyphens (-), underscores (_), and at signs (@).     |
-      +-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Type                  | Description                                                                                                                                              |
+      +=======================+=======================+==========================================================================================================================================================+
+      | key                   | String                | Specifies the tag key. The key:                                                                                                                          |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Cannot be an empty string.                                                                                                                            |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Must be unique for each resource.                                                                                                                     |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can contain a maximum of 128 characters.                                                                                                              |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Cannot start or end with a space, or start with **\_sys\_**. Only letters, digits, spaces, and the following special characters are allowed: \_.:=+-@ |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | value                 | String                | Specifies the tag value. The value:                                                                                                                      |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can be an empty string.                                                                                                                               |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can contain a maximum of 255 characters.                                                                                                              |
+      |                       |                       |                                                                                                                                                          |
+      |                       |                       | -  Can contain letters, digits, spaces, and the following special characters: ``_.:/=+-@``                                                               |
+      +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 
    .. _vpcep_06_0304__table132038432718:
 
@@ -266,7 +301,11 @@ Response
        "specification_name": "default",
        "enable_status": "enable",
        "description": "",
-       "endpoint_pool_id": "0e796c11-6cf1-484a-9b8c-f837cb925287"
+       "endpoint_pool_id": "0e796c11-6cf1-484a-9b8c-f837cb925287",
+       "public_border_group": "center",
+       "ip_version": "ipv4",
+       "enterprise_project_id": "0",
+       "edition": "basic"
       }
 
    Querying details of a gateway VPC endpoint
@@ -305,10 +344,19 @@ Response
        "specification_name": "default",
        "enable_status": "enable",
        "description": "",
-       "endpoint_pool_id": "d86778c4-ad4b-4abd-988e-8c2572047fe4"
+       "endpoint_pool_id": "d86778c4-ad4b-4abd-988e-8c2572047fe4",
+       "public_border_group": "center",
+       "ip_version": "ipv4",
+       "enterprise_project_id": "0",
+       "edition": "basic"
       }
 
 Status Codes
 ------------
 
 See :ref:`Status Codes <vpcep_08_0001>`.
+
+Error Codes
+-----------
+
+For details, see :ref:`Error Codes <vpcep_08_0002>`.

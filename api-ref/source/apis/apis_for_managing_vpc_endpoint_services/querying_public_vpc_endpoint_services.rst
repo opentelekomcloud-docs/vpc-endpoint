@@ -138,7 +138,7 @@ Response
           {
             "id": "26391a76-546b-42a9-b2fc-496ec68c0e4d",
             "owner": "example"
-            "service_name":  "OBS",
+            "service_name": "OBS",
             "service_type": "gateway",
             "created_at": "2019-03-28T09:30:27Z",
             "is_charge": "true"
@@ -151,3 +151,8 @@ Status Codes
 ------------
 
 See :ref:`Status Codes <vpcep_08_0001>`.
+
+Error Codes
+-----------
+
+For details, see :ref:`Error Codes <vpcep_08_0002>`.

@@ -1,49 +1,55 @@
-:original_name: vpcep_06_0101.html
+:original_name: vpcep_06_0102.html
 
-.. _vpcep_06_0101:
+.. _vpcep_06_0102:
 
-Querying Versions of VPCEP APIs
-===============================
-
-.. _vpcep_06_0101__section911804819271:
+Querying the Version of a Specified VPC Endpoint API
+====================================================
 
 Function
 --------
 
-This API is used to query versions of VPCEP APIs.
-
-.. note::
-
-   v2 cannot be used.
+This API is used to query the version of a specified VPC Endpoint API.
 
 URI
 ---
 
-GET /
+GET /{version}
 
 Request
 -------
 
+-  Parameters
+
+   .. table:: **Table 1** Request parameter
+
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+      | Parameter       | Mandatory       | Type            | Description                                                                    |
+      +=================+=================+=================+================================================================================+
+      | version         | No              | String          | Specifies the version to be queried. The value starts with v, for example, v1. |
+      |                 |                 |                 |                                                                                |
+      |                 |                 |                 | If this parameter is left blank, versions of all APIs are queried.             |
+      +-----------------+-----------------+-----------------+--------------------------------------------------------------------------------+
+
 -  Example request
 
-   GET https://{endpoint}/
+   GET https://{endpoint}/v1
 
 Response
 --------
 
--  Parameters
+-  Parameter
 
-   .. table:: **Table 1** Response parameters
+   .. table:: **Table 2** Response parameter
 
-      +-----------+------------------+------------------------------------------------------------------------------------------------------+
-      | Parameter | Type             | Description                                                                                          |
-      +===========+==================+======================================================================================================+
-      | versions  | Array of objects | Lists the versions of VPCEP APIs. For details, see :ref:`Table 2 <vpcep_06_0101__table13687304356>`. |
-      +-----------+------------------+------------------------------------------------------------------------------------------------------+
+      +-----------+--------+-------------------------------------------------------------------------------------------------------------+
+      | Parameter | Type   | Description                                                                                                 |
+      +===========+========+=============================================================================================================+
+      | version   | Object | Lists the versions of VPC Endpoint APIs. For details, see :ref:`Table 3 <vpcep_06_0102__table13687304356>`. |
+      +-----------+--------+-------------------------------------------------------------------------------------------------------------+
 
-   .. _vpcep_06_0101__table13687304356:
+   .. _vpcep_06_0102__table13687304356:
 
-   .. table:: **Table 2** **VersionModel** parameters
+   .. table:: **Table 3** VersionModel parameters
 
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------+
       | Parameter             | Type                  | Description                                                                                           |
@@ -64,12 +70,12 @@ Response
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------+
       | min_version           | String                | Specifies the microversion number. If the APIs do not support microversions, the value is left blank. |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------+
-      | links                 | Array of objects      | Specifies the API URL. For details, see :ref:`Table 3 <vpcep_06_0101__table2072420713363>`.           |
+      | links                 | Array of objects      | Specifies the API URL. For details, see :ref:`Table 4 <vpcep_06_0102__table2072420713363>`.           |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------+
 
-   .. _vpcep_06_0101__table2072420713363:
+   .. _vpcep_06_0102__table2072420713363:
 
-   .. table:: **Table 3** **VersionLink** parameters
+   .. table:: **Table 4** VersionLink parameters
 
       +-----------+--------+-----------------------------------------------------------------------------------------------+
       | Parameter | Type   | Description                                                                                   |
@@ -81,46 +87,35 @@ Response
       | rel       | String | Specifies the relationship between the current API version and the referenced address.        |
       +-----------+--------+-----------------------------------------------------------------------------------------------+
 
--  .. _vpcep_06_0101__li91288579361:
-
-   Example response
+-  Example response
 
    .. code-block::
 
       {
-          "versions": [
+        "version":{
+          {
+            "updated":"2018-09-30T00:00:00Z",
+            "version":"1",
+            "min_version":"",
+            "status":"CURRENT",
+            "id":"v1",
+            "links":[
               {
-                  "status": "CURRENT",
-                  "id": "v1",
-                  "updated": "2018-09-30T00:00:00Z",
-                  "version": "1",
-                  "links": [
-                      {
-                          "rel": "self",
-                          "href": "https://{vpcep_uri}/v1",
-                          "type": "application/json"
-                      }
-                  ],
-                  "min_version": ""
-              },
-              {
-                  "status": "CURRENT",
-                  "id": "v2",
-                  "updated": "2020-03-30T00:00:00Z",
-                  "version": "2",
-                  "links": [
-                      {
-                          "rel": "self",
-                          "href": "https://{vpcep_uri}/v2",
-                          "type": "application/json"
-                      }
-                  ],
-                  "min_version": ""
+                "href":"https://{vpcep_uri}/v1",
+                "type":"application/json",
+                "rel":"self"
               }
-          ]
+            ]
+          }
+        }
       }
 
 Status Codes
 ------------
 
 See :ref:`Status Codes <vpcep_08_0001>`.
+
+Error Codes
+-----------
+
+For details, see :ref:`Error Codes <vpcep_08_0002>`.
